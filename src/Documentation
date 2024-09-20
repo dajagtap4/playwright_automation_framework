@@ -1,0 +1,205 @@
+
+1. What is Playwright?
+
+open-source automation library for testing web applications. Developed by Microsoft
+
+Key features :
+
+Cross-browser support: Run tests in multiple browsers with a single API.
+Auto-waiting: Automatically waits for elements to be ready before executing actions, which reduces flakiness in tests.
+Headless mode: Supports running tests without a UI, making it faster and more efficient for CI/CD pipelines.
+Mobile emulation: Simulates mobile devices for testing responsive designs.
+Rich API: Offers a wide range of functions for interacting with pages, such as clicking buttons, filling forms, and taking screenshots.
+
+-------------------------------------------------------------------------------------------------------------------
+2. How does Playwright differ from Selenium?
+
+1. Architecture
+Playwright: Built from the ground up to support modern web applications, Playwright uses browser-specific protocols (like DevTools Protocol) for direct communication, resulting in faster execution.
+Selenium: Works with a WebDriver protocol that communicates with browsers. While widely supported, it can be slower due to this additional layer.
+
+2. Browser Support
+Playwright: Supports Chrome, Firefox, Safari, and Edge out of the box, including their respective headless modes. It also provides mobile device emulation.
+Selenium: Also supports multiple browsers but may require additional setup for certain browsers or versions.
+
+3. Auto-Waiting
+Playwright: Automatically waits for elements to be ready (e.g., visible, attached to the DOM) before interacting with them, which reduces flakiness in tests.
+Selenium: Requires explicit waits (e.g., WebDriverWait) for similar behavior, which can lead to more complex code.
+
+4. Cross-Browser Testing
+Playwright: Designed for parallel execution and can easily run tests across different browsers with minimal configuration.
+Selenium: Supports cross-browser testing but can require more setup and configuration.
+
+5. API Design
+Playwright: Offers a modern, promise-based API that is easier to work with and integrates well with async programming.
+Selenium: The API is more traditional and can be less intuitive for handling asynchronous operations.
+
+6. Mobile Testing
+Playwright: Has built-in support for mobile emulation and testing, making it easier to test responsive designs.
+Selenium: Mobile testing can be more complex and often requires integration with additional tools like Appium.
+
+7. Community and Ecosystem
+Playwright: A newer tool with growing popularity and a rapidly expanding ecosystem.
+Selenium: A well-established tool with a large community, extensive documentation, and a wide range of plugins.
+
+-------------------------------------------------------------------------------------------------------------------
+3.  What are the primary components of Playwright?
+
+1. Browser Context
+2. Pages
+3. Selectors
+4. Devices
+5. Network Interception
+6. Test Runner
+7. Trace Viewer
+8. API for Interactions
+9. Geolocation and Permissions
+10. Multiple Browsers
+-------------------------------------------------------------------------------------------------------------------
+
+4.What is a BrowserContext in Playwright?
+
+const { chromium } = require('playwright');
+
+(async () => {
+    const browser = await chromium.launch();
+    const context = await browser.newContext(); // Create a new context
+    const page = await context.newPage(); // Create a new page within the context
+
+    await page.goto('https://example.com');
+    // Add your testing code here
+
+    await context.close(); // Close the context when done
+    await browser.close(); // Close the browser
+})();
+
+Using BrowserContexts in Playwright allows for efficient and organized testing, enabling developers to manage multiple 
+user sessions and environments seamlessly. This isolation and flexibility are particularly useful for testing 
+applications with varied user states or multi-user scenarios.
+-------------------------------------------------------------------------------------------------------------------
+
+5.How do you handle navigation and wait for elements?
+
+To navigate to a new page, you typically use the page.goto() method. Playwright automatically waits for the page
+to load before proceeding with further actions. Here’s an example:
+
+await page.goto('https://example.com'); // Navigate to the URL
+
+Playwright provides several methods to wait for elements to become available before interacting with them. 
+Here are some common approaches:
+
+1.Auto-Waiting: By default, Playwright waits for elements to be visible, attached to the DOM, 
+and actionable before interacting with them. For example:
+
+await page.click('button#submit'); // Automatically waits for the button to be ready
+
+2.Explicit Waits: If you need more control, you can use explicit wait functions like waitForSelector():
+
+await page.waitForSelector('div.alert', { state: 'visible' }); // Wait until the element is visible
+
+3.Wait for Navigation: If an action triggers a navigation (like a form submission), you can use page.waitForNavigation() in conjunction with your action:
+
+4.Timeouts: You can specify a timeout for waits to prevent indefinitely hanging tests:
+
+await page.waitForSelector('div.alert', { timeout: 5000 }); // Wait with a 5-second timeout
+
+5.Wait for Network Requests: You can wait for network requests to complete using waitForResponse() or waitForRequest():
+
+await page.waitForResponse(response => response.url().includes('/api/data') && response.status() === 200);
+-------------------------------------------------------------------------------------------------------------------
+
+6.Can you explain how to take screenshots and videos in Playwright?
+
+
+Sure! In Playwright, taking screenshots and recording videos of your test runs is straightforward and can be very useful for debugging and documentation. Here’s how to do both:
+
+Taking Screenshots
+You can capture screenshots at different points in your tests. Here’s how:
+
+1.Full Page Screenshot: To capture a screenshot of the entire page:
+await page.screenshot({ path: 'fullpage.png', fullPage: true });
+
+2.Element Screenshot: To capture a screenshot of a specific element:
+const element = await page.$('selector'); // Select the element
+await element.screenshot({ path: 'element.png' });
+
+3.Partial Page Screenshot: To capture a screenshot of a specific viewport:
+await page.screenshot({ path: 'viewport.png' });
+
+Create a Browser Context with Video Recording:
+
+When creating a new context, you can specify the video options. Here’s an example:
+
+const { chromium } = require('playwright');
+
+(async () => {
+    const browser = await chromium.launch();
+    const context = await browser.newContext({
+        recordVideo: {
+            dir: 'videos/', // Directory to save videos
+            size: { width: 1280, height: 720 } // Video resolution
+        }
+    });
+    const page = await context.newPage();
+
+    await page.goto('https://example.com');
+    // Your testing code here
+
+    await context.close(); // Close the context to finalize the video
+    await browser.close(); // Close the browser
+})();
+-------------------------------------------------------------------------------------------------------------------
+
+7.How do you perform assertions in Playwright?
+
+await expect(page.locator('selector')).toBeVisible();
+await expect(page.locator('selector')).toHaveText('expected text');
+await expect(page.locator('input')).toHaveAttribute('type', 'text');
+await expect(page.locator('input')).toHaveValue('expected value');
+const count = await page.locator('selector').count();
+expect(count).toBeGreaterThan(0); // or any other assertion
+
+const title = await page.title();
+expect(title).toBe('Example Domain');
+
+const heading = await page.locator('h1');
+expect(await heading.isVisible()).toBe(true);
+-------------------------------------------------------------------------------------------------------------------
+
+8.How can you run tests in parallel using Playwright?
+
+1. Default Parallelism
+By default, Playwright Test runs tests in parallel across multiple browser contexts. Each test file runs in its own worker, 
+and multiple workers can run simultaneously. This is managed automatically by Playwright.
+
+2.Configuration
+You can control parallel execution in your Playwright configuration file
+workers: 4, // Adjust this number based on your machine
+
+3.npx playwright test
+
+4.Grouping Tests
+If you want to control which tests run in parallel, you can use test.describe.parallel() to group tests that should run in parallel:
+
+const { test, expect } = require('@playwright/test');
+
+test.describe.parallel('Group 1', () => {
+    test('Test 1', async ({ page }) => {
+        await page.goto('https://example.com');
+        // Test code here
+    });
+
+    test('Test 2', async ({ page }) => {
+        await page.goto('https://example.com');
+        // Test code here
+    });
+});
+
+test.describe('Group 2', () => {
+    test('Test 3', async ({ page }) => {
+        await page.goto('https://example.com');
+        // This will run sequentially with other tests in Group 2
+    });
+});
+
+-------------------------------------------------------------------------------------------------------------------
