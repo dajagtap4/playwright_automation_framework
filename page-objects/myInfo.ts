@@ -4,6 +4,7 @@ export class myInfo{
 
     readonly page: Page
     readonly clickMyInfo : Locator
+    readonly countryDropdown : Locator
     readonly save : Locator
 
     constructor(page: Page){
