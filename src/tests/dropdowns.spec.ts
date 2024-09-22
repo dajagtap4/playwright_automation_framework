@@ -5,54 +5,51 @@ import { TIMEOUT } from "dns/promises";
 test.beforeEach(async( { page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
 })
+
 //-----------------------------------------------------------------------------
 
 
-test('label or visible text',async( { page }) => {
+test('test',async( { page }) => {
 
-   await page.locator('#country').selectOption({label: 'Canada'});
+    //label or visible text
+    await page.locator('#country').selectOption({label: 'Canada'});
 
-})
+    await page.waitForTimeout(1000)
 
-test('visible text',async( { page }) => {
- 
+    //visible text
     await page.locator('#country').selectOption('India');
 
-})
+    await page.waitForTimeout(1000)
 
-test('by passing value',async( { page }) => {
-
+    //by passing value
     await page.locator('#country').selectOption({value: 'uk'});
  
- })
+    await page.waitForTimeout(1000)
 
-
- test('by passing index',async( { page }) => {
-
+    //by passing index
     await page.locator('#country').selectOption({index: 4});
  
- })
+    await page.waitForTimeout(1000)
 
- test('dropdown option',async( { page }) => {
-
+    //dropdown option
     await page.selectOption("#country", 'China');
  
  })
 
- test('Approch 1 : check number of options in dropdown',async( { page }) => {
+ test('check number of options in dropdown',async( { page }) => {
 
-    //Assertion
+    //Approch 1 : 
     const options = await page.locator("#country option");
     await expect(options).toHaveCount(10);
+
+    await page.waitForTimeout(1000)
+
+    //Approch 2 :
+    const options2 = await page.$$("#country option");
+    //console.log("Nu of options :", options2.length)
+    await expect(options2.length).toBe(10)
  })
 
- test('Approch 2 : check number of options in dropdown',async( { page }) => {
-
-    //Assertion
-    const options = await page.$$("#country option");
-    console.log("Nu of options :", options.length)
-    await expect(options.length).toBe(10)
- })
 
  test('Approch 1: check "India" option present in dropdown',async( { page }) => {
 
@@ -68,7 +65,7 @@ test('by passing value',async( { page }) => {
  test('Approch 2 - loop : check "Brazil" option present in dropdown',async( { page }) => {
 
     //Assertion
-    const options = await page.$$("#country option")
+    const options = await page.$$("#country")
     let status = false;
      
     for(const option of options){
