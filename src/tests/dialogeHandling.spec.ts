@@ -52,4 +52,5 @@ test('Prompt',async ({page}) => {
     await expect(page.locator('#demo')).toHaveText('Hello John! How are you today?')
     await page.waitForTimeout(2000)
     await page.close()
+    //this is for alpha branch
 })
