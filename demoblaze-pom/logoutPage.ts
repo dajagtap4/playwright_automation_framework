@@ -13,9 +13,8 @@ export class logoutPage{
     }
 
     async logoutFromPage(){
-        await this.page.waitForTimeout(2000)
         await this.logoutLink.click()
-        await this.page.waitForTimeout(2000)
+        await this.page.waitForTimeout(1000)
         //await this.logoutButton.click()
     }
 }
