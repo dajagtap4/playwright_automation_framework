@@ -1,0 +1,4 @@
+const pointA = page.locator('#source');
+const pointB = page.locator('#target');
+
+await pointA.dragTo(pointB);
