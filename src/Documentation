@@ -1,3 +1,21 @@
+npm : File C:\Program Files\nodejs\npm.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies 
+at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ npm init playwright@latest
++ ~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+
+if above error get while using playwright use below commands to resolve
+
+Open PowerShell as Administrator:
+1   -   Get-ExecutionPolicy
+2   -   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Done
+
+--------------------------------------------------------------------------------
 
 1. What is Playwright?
 
