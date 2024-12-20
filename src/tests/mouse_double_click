@@ -1,0 +1,13 @@
+import { test, expect } from '@playwright/test';
+
+test('has title', async ({ page }) => {
+
+  await page.goto("https://testautomationpractice.blogspot.com/");
+
+  const doubleClick = await page.locator('//*[@id="HTML10"]/div[1]/button')
+  await doubleClick.dblclick()
+
+  const f2 = await page.locator('#field2')
+  await expect(f2).toHaveValue('Hello World!')
+
+});
