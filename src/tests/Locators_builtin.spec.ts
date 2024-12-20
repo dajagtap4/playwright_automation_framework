@@ -8,25 +8,40 @@ page.getByTitle() to locate an element by its title attribute.
 page.getByTestId() to locate an element based on its data-testid attribute (other attributes can be configured).
 */
 
-import { expect, test } from "@playwright/test";
+import { test, expect } from '@playwright/test';
+import { url } from 'inspector';
 
-test('built-inLocators',async({ page }) => {
-    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-
-    //getByAltText
-    const logo = await page.getByAltText('company-branding')
-    await expect(logo).toBeVisible();
-
-    //getByPlaceholder
-    await page.getByPlaceholder('Username').fill("Admin")
-    await page.getByPlaceholder('Password').fill("admin123")
-
-    //getByRole
-    await page.getByRole('button', { type: 'submit'} ).click()
-
-    //getByText
-    const name = await page.locator('//*[@id="app"]/div[1]/div[100]/aside/nav/div[2]/ul/li[1]/a/span').textContent()
-    await expect(page.getByText(name)).toBeVisible()
+test('has title', async ({ page }) => {
+  await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 
-})
+  //getByTitle
+  //<span title='Issues count'>25 issues</span>
+  //await expect(page.getByTitle('Issues count')).toHaveText('25 issues');
+
+  //getByTestId
+  //<button data-testid="directions">Itinéraire</button>
+  //await page.getByTestId('directions').click();
+
+  //getByAltText
+  const logo = await page.getByAltText('company-branding')
+  await expect(logo).toBeVisible();
+
+  //getByText
+  await expect(page.getByText('Username : Admin')).toBeVisible();
+  await expect(page.getByText('Password : admin123')).toBeVisible();
+
+  //getByPlaceholder
+  await page.getByPlaceholder('Username').fill("Admin")
+  await page.getByPlaceholder('Password').fill("admin123")
+
+  //getByLabel
+  // <label data-v-30ff22b1="" data-v-957b4417="" class="oxd-label">Password</label>
+  const labelPass = await page.getByLabel('Password')
+  await expect(labelPass).toBeTruthy()
+
+  //getByRole
+  //<button  type="submit" class="oxd-button"><!----> Login <!----></button>
+  await page.getByRole('button', { name:  "Login" }).click();
+  
+});
