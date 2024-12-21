@@ -7,6 +7,7 @@ https://www.youtube.com/watch?v=9_ClpUoVchg&list=PLUDwpEzHYYLsw33jpra65LIvX1nKWp
 
 ### 1. Installation allure playwright module
 
+run below all commands in vs code terminal
 npm i -D @playwright/test allure-playwright
 
 
