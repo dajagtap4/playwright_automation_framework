@@ -1,18 +1,18 @@
 # LamdaTest Playwright Integration
 
-Cretate playwright project,
+> Cretate playwright project,
 
 create .ts file (playwright-single.ts)
 ---
 update package.json file as follow
-
+```
 "dependencies": {
     "dotenv": "^16.4.5"
   }
-
+```
 ---
-playwright-single.ts-
-
+`laywright-single.ts`
+```
 import { chromium,expect } from "@playwright/test";
 const cp = require('child_process');
 
@@ -69,25 +69,27 @@ const playwrightClientVersion = cp.execSync('npx playwright --version').toString
     await page.close();
     await browser.close();
   }
+```
 
----
 
->>>>>>    npm install -g ts-node
----
+`npm install -g ts-node`
+
 Install TypeScript globally (if you haven't yet):
 
->>>>>>    npm install -g typescript
+`npm install -g typescript`
 
 ---
 Compile your TypeScript file to JavaScript:
 
 Run the TypeScript compiler (tsc) to convert your .ts file into a .js file.
 
->>>>>>    tsc playwright-single.ts
+`tsc playwright-single.ts`
+
 This will generate a playwright-single.js file.
+
 ---
 Run the compiled JavaScript file:
 
 Now, you can run the compiled JavaScript file using Node.js:
 
->>>>>>    node playwright-single.js
+`node playwright-single.js`
