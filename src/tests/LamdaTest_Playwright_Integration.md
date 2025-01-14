@@ -83,7 +83,9 @@ Compile your TypeScript file to JavaScript:
 
 Run the TypeScript compiler (tsc) to convert your .ts file into a .js file.
 
-`tsc playwright-single.ts`
+`tsc tests/playwright-single.ts`
+
+for above command give proper path else it will give error
 
 This will generate a playwright-single.js file.
 
