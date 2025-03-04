@@ -1,20 +1,34 @@
-# Selenium with BDD setup
+# SeleniumJava with BDD setup
 
 1. Create Maven project,
 2. Add maven dependancies 
 
 ```
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.21.1</version>
-</dependency>
+        <dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-java</artifactId>
+			<version>7.21.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>cucumber-junit</artifactId>
+			 <version>7.21.1</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
+			<scope>test</scope>
+		</dependency>
 ```
 
 3. Create `Features` folder at 
 `src/test/resources` craete `login.feature` file in Features folder.
 
-`login.feature` 
+>login.feature
 ```
 Feature: Add Feature here 
 
@@ -31,7 +45,7 @@ Then user is navigated to homepage
 
 5. Create `Step Definitions` folder at `src/test/java`, create java class `loginSteps.java`, paste all from console
 
-
+>loginSteps.java
 ```
 package StepDefinations;
 
@@ -63,7 +77,7 @@ public class loginSteps {
 }
 ```
 
-5. Run again (Right click on feature file > Run As > Cucumber feature)
+6. Run again (Right click on feature file > Run As > Cucumber feature)
 
 we will se below result 
 
@@ -83,6 +97,32 @@ user is navigated to homepage4
 0m0.134s
 ```
 
+7. Create `TestRunner.java` in `Step Definitions` folder at `src/test/java`
+
+> TestRunner.java
+```
+package StepDefinations;
+
+import org.junit.runner.RunWith;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features ="src/test/resources/Features",glue = {"StepDefinations"})
+public class TestRunner {
+
+}
+```
+8. Runn `TestRunner` class (Right click on `TestRunner.java`  > Run As > JUnit Test)
+
+`Output`
+
+```
+user is on login page1
+user enter username and password2
+click on login butto3
+user is navigated to homepage4
+```
 #  BASIC SETUP DONE ^
 
 There are advanced concepts in cucumber bdd will add later.
