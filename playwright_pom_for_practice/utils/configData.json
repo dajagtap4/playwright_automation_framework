@@ -1,0 +1,8 @@
+{
+    "browser": "chrome",
+    "testurl": "https://testautomationpractice.blogspot.com/",
+    "userName": "Deepak",
+    "expectedTitle": "Automation Testing Practice",
+    "wrongtitle": "Wrong Title"
+  }
+  
