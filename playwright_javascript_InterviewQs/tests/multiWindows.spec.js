@@ -2,7 +2,7 @@ import { test, expect, chromium } from '@playwright/test';
 
 test('handling multi windows', async ({ page }) => {
 
-  const browser = await chromium.launch()
+  const browser = await chromium.launch({ headless: true });
   const context = await browser.newContext()
   const  page1  = await context.newPage()
 
