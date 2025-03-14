@@ -8,14 +8,13 @@ class practicePOM {
         this.username = page.locator(configLocators2.nameInputBox);
     }
     async enterName(name) {
-        await this.username.fill(configDatas2.userName); 
-        return name; 
+        await this.username.fill(configDatas2.userName);
+        return name;
     }
 
     async getPageTitle() {
-        return await this.page.title(); 
+        return await this.page.title();
     }
-   
 }
 
 module.exports = { practicePOM };

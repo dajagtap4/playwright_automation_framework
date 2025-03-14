@@ -27,7 +27,7 @@ test.describe('Practice POM Test Suite', () => {
     test('Enter Name and Verify Input', async () => {
         await practice.enterName(configDatas.userName); // Use the method to enter name
         const enteredName = await page.locator(configLocators.nameInputBox).inputValue();
-        expect(enteredName).toBe(configDatas.userName); 
+        expect(enteredName).toBe(configDatas.userName);
     });
 
     test.afterAll(async () => {
