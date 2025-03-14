@@ -28,10 +28,20 @@ test.describe('Practice POM Test Suite', () => {
         expect(title).not.toBe(configDatas.wrongtitle);
     });
 
-    test('TC003 Enter Name and Verify Input', async () => {
+    test('TC003 verigy Title ".not.toBe()" empty', async () => {
+        const title = await practice.getPageTitle();
+        expect(title).not.toBe("");
+    });
+
+    test('TC004 verify Title ".not.toContain()" Unexpected Text', async () => {
+        const title = await practice.getPageTitle();
+        expect(title).not.toContain('error');
+    });
+
+    test('TC005 verify user can Enter Name and Verify Input', async () => {
         await practice.enterName(configDatas.userName);  // Use 'practice' from beforeAll
-        const enteredName = await page.locator(configLocators.nameInputBox).inputValue();
-        expect(enteredName).toBe(configDatas.userName);
+        const ActualEnteredName = await page.locator(configLocators.nameInputBox).inputValue();
+        expect(ActualEnteredName).toBe(configDatas.userName);
     });
 
     test.afterAll(async () => {
