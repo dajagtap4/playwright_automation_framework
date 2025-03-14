@@ -1,13 +1,14 @@
 import { test, expect, chromium } from '@playwright/test';
 
 test('multi windows handles', async ({ page }) => {
-  const browser = await chromium.launch();
+  const browser = await chromium.launch({headless:true});
   const context = await browser.newContext();
   const page1 = await context.newPage();
 
   //at page 1 (homepage)
   await page1.goto("https://demo.automationtesting.in/Windows.html" );
   await expect(page1).toHaveTitle("Frames & windows");
+  
   //new page will open but control still on page 1 
   await page1.locator('//*[@id="Tabbed"]/a/button').click(); 
 
