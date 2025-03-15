@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { practicePOM } from '../pages/practicePOM';
-const configDatas = JSON.parse(JSON.stringify(require('../utils/configData.json')));
-const configLocators = JSON.parse(JSON.stringify(require('../utils/configLocator.json')));
+const configDatas = require('../utils/configData.json');
+const configLocators = require('../utils/configLocator.json');
 
 test.describe('Practice POM Test Suite', () => {
 
@@ -45,7 +45,6 @@ test.describe('Practice POM Test Suite', () => {
     });
 
     test.afterAll(async () => {
-        // Close the page after tests
         await page.close();
     });
 
