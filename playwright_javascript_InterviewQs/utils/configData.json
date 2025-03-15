@@ -1,7 +1,10 @@
 {
     "blogspot_testurl": "https://testautomationpractice.blogspot.com/",
     "frames_testurl": "https://demo.automationtesting.in/Frames.html",
-    
+    "keyboard_actions_testurl":"https://gotranscript.com/text-compare",
+
     "username": "Deepak",
-    "dbl_click_expected_input_value":"Hello World!"
+    "dbl_click_expected_input_value":"Hello World!",
+
+    "keyword_actions_demo_text":"this is demo testing for keyboard actions"
 }

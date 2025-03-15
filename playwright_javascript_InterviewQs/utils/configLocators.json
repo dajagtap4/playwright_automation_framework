@@ -9,5 +9,7 @@
     "dbl_click_input_value":"#field2",
 
     "drag_locator":"//*[@id='draggable']/p",
-    "drop_locator":"//*[@id='droppable']"
+    "drop_locator":"//*[@id='droppable']",
+
+    "keyboard_actions_first_input_field":"[name='text1']"
 }
