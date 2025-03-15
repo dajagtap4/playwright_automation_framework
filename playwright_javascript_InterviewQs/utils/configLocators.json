@@ -6,5 +6,8 @@
     "hover_button_dropdown":"//*[@id='HTML3']/div[1]/div/div/a[1]",
 
     "dbl_click_button":"//*[@id='HTML10']/div[1]/button",
-    "dbl_click_input_value":"#field2"
+    "dbl_click_input_value":"#field2",
+
+    "drag_locator":"//*[@id='draggable']/p",
+    "drop_locator":"//*[@id='droppable']"
 }
