@@ -10,7 +10,7 @@ class practicePOM {
     }
     
     async enterName(name) {
-        await this.username.fill(configDatas.userName);
+        await this.username.fill(name);
         return name;
     }
 
