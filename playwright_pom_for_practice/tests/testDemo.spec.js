@@ -44,7 +44,7 @@ test.describe('Practice POM Test Suite', () => {
         expect(ActualEnteredName).toBe(configDatas.userName);
     });
 
-     test('TC006 verify user can enter empty input', async () => {
+    test('TC006 verify user can enter empty input', async () => {
         await practice.enterName(""); 
         const ActualEnteredName = await practice.username.inputValue();
         expect(ActualEnteredName).toBe("");
