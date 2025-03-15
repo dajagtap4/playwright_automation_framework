@@ -1,0 +1,7 @@
+{
+    "blogspot_testurl": "https://testautomationpractice.blogspot.com/",
+    "frames_testurl": "https://demo.automationtesting.in/Frames.html",
+    
+    "username": "Deepak",
+    "dbl_click_expected_input_value":"Hello World!"
+}

@@ -1,0 +1,10 @@
+{
+    "frame_locator":"#singleframe",
+    "input_locator":"input[type='text']",
+
+    "hover_button":"//*[@id='HTML3']/div[1]/div/button",
+    "hover_button_dropdown":"//*[@id='HTML3']/div[1]/div/div/a[1]",
+
+    "dbl_click_button":"//*[@id='HTML10']/div[1]/button",
+    "dbl_click_input_value":"#field2"
+}
