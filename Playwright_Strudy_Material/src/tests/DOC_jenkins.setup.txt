@@ -1,0 +1,13 @@
+Navigate to Jenkins installation web url-
+https://www.jenkins.io/download/
+> CLick on Windows optiom
+> Download will start 
+> Double click on jenkins.msi file which is downloaded,
+> Next > Next > Run service as local system > Test Port > Next > Next > Next > Install
+
+Navigate to jenkins Localhost - http://localhost:8080/
+> Need to find key to unlock, Navigate to below path,
+C:\ProgramData\Jenkins\.jenkins\secrets\initialAdminPassword
+
+> Select "Install Suggested plugins"
+> Getting Started
