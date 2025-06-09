@@ -1,0 +1,20 @@
+{
+  "name": "playwright_switch2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "regression":"npx playwright test",
+    "E2E":"npx playwright test tests/ClientAppE2E.spec.js --project=chromium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.3",
+    "allure-playwright": "^3.2.2"
+  }
+}
+ 
