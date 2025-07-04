@@ -20,7 +20,8 @@ test('@E2E', async ({ page }) => {
     // add item to cart 
     const count = await products.count();
     for (let i = 0; i < count; ++i) {
-       if (await products.nth(i).locator("b").textContent() === productName) {
+      const productText = await products.nth(i).locator("b").textContent();
+       if ( productText === productName) {
           await products.nth(i).locator("text= Add To Cart").click();
           break;
        }
