@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "regression":"npx playwright test",
-    "E2E":"npx playwright test tests/ClientAppE2E.spec.js --project=chromium"
+    "regression": "npx playwright test",
+    "E2E": "npx playwright test tests/ClientAppE2E.spec.js --project=chromium"
   },
   "keywords": [],
   "author": "",
@@ -14,7 +14,7 @@
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.3",
-    "allure-playwright": "^3.2.2"
+    "allure-playwright": "^3.2.2",
+    "prettier": "^3.6.2"
   }
 }
- 

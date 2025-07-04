@@ -1,14 +1,14 @@
 const {test,expect} = require('@playwright/test');
 
 test('@Web print first iteam from product page', async ({ page }) => {
-    const email = "anshika@gmail.com";
+    const email = "jagtapda2019@gmail.com";
     const expectedFirstItem = 'zara coat 3';
     const products = page.locator(".card-body");
 
     await page.goto("https://rahulshettyacademy.com/client");
 
     await page.locator("#userEmail").fill(email);
-    await page.locator("#userPassword").fill("Iamkig@000");
+    await page.locator("#userPassword").fill("Deepak@1994");
     await page.locator("[value='Login']").click();
 
     // Playwright.dev suggested that below line may not work every time 

@@ -3,6 +3,7 @@ const {DashboardPage} = require('./DashboardPage');
 const {OrdersHistoryPage} = require('./OrdersHistoryPage');
 const {OrdersReviewPage} = require('./OrdersReviewPage');
 const {CartPage} = require('./CartPage');
+
 class POManager
 {
 constructor(page)
@@ -13,7 +14,6 @@ constructor(page)
     this.ordersHistoryPage = new OrdersHistoryPage(this.page);
     this.ordersReviewPage = new OrdersReviewPage(this.page);
     this.cartPage = new CartPage(this.page);
-
 
 }
 
