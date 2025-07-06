@@ -1,7 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-//Search iphone
-//click on add to cart which has Lowest price.
+//Search iphone -> add to cart (Lowest price).
 test('LogicBuilding_1', async ({ page }) => {
 
     await page.goto("https://www.amazon.in/");
@@ -12,28 +11,23 @@ test('LogicBuilding_1', async ({ page }) => {
     await page.waitForSelector('.puisg-row.puis-desktop-list-row', { timeout: 10000 });
 
     const priceLocator = page.locator(".puisg-row.puis-desktop-list-row");
-    const count = await priceLocator.count();
-
-    // for(let i=0; i<count; i++)
-    // {
-    //     const priceText = await priceLocator.locator(' div div div div div a span span span:nth-of-type(2)').nth(i).textContent();
-    //     console.log(priceText.trim());
-
-    //     if(priceText==="1,34,900"){
-    //         await priceLocator.locator(" .a-button-text").nth(i).click();
-    //     }
-    // }    
+    const count = await priceLocator.count();   
     
     // Logic to find and click the lowest price iPhone
     let minPrice = Number.MAX_VALUE;
     let minIndex = -1;
 
     for (let i = 0; i < count; i++) {
-        const priceText = await priceLocator.locator(' div div div div div a span span span:nth-of-type(2)').nth(i).textContent();
-        const cleanPrice = priceText?.replace(/[^0-9]/g, ''); //price as a string containing only digits (e.g., "60300").
-        const priceValue = parseInt(cleanPrice); //price as an integer (number) (e.g., 60300).
-       
-        if (!isNaN(priceValue) && priceValue < minPrice) {
+        const priceText  = await priceLocator.locator(' div div div div div a span span span:nth-of-type(2)')
+                            .nth(i).textContent();
+        const cleanPrice = priceText?.replace(/[^0-9]/g, '');  
+        const priceValue = parseInt(cleanPrice);  
+
+        // priceText  = "₹1,34,900"
+        // cleanPrice = "134900"
+        // priceValue = 134900
+    
+        if (priceValue < minPrice) {
             minPrice = priceValue;
             minIndex = i;
         }
@@ -47,6 +41,7 @@ test('LogicBuilding_1', async ({ page }) => {
     }
 });
 
+// Rahul shetty website -> login -> Add to cart
 test('LogicBuilding_2', async ({ page }) => {
     const email = "jagtapda2019@gmail.com";
     const expectedFirstItem = 'ZARA COAT 3';
