@@ -124,3 +124,24 @@ test('LogicBuilding_3', async ({ page }) => {
             }   
     }
 });
+
+// verify expected text "Liechtenstein" is display in table.
+test("LogicBuilding_4",async({page})=>
+{
+    await page.goto("https://cosmocode.io/automation-practice-webtable");
+
+    const tableTiles = page.locator('#countries tbody tr td');
+    const count = await tableTiles.count();
+    console.log(`Total tile count is - ${count}`);
+
+    const expectedText = "Liechtenstein";
+
+    for(let i=0;i<count;i++){
+        const tableText = await tableTiles.nth(i).textContent();
+        if(tableText===expectedText){
+            console.log('Expected text and actual is matching');
+            console.log(`Actual tile text is - ${tableText}`);
+            break;
+        }
+    }
+});
