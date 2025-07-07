@@ -12,7 +12,6 @@ test("Calendar",async({page})=>
     await page.locator(".react-calendar__navigation__label").click();
     await page.locator(".react-calendar__navigation__label").click();
 
-    //const desiredYear = parseInt(year);
     let yearFound = false;
     while(!yearFound)
     {
@@ -22,7 +21,6 @@ test("Calendar",async({page})=>
         for(let i=0;i<count;i++)
         {
             const yearText = await yearsTiles.nth(i).textContent();
-            //console.log(yearText);
             if(yearText === year)
             {
                 await yearsTiles.nth(i).click();
@@ -46,13 +44,13 @@ test("Calendar",async({page})=>
                 }      
             }
     }
-    await page.locator(".react-calendar__year-view__months__month").nth(Number(monthNumber)-1).click();
-    await page.locator("//abbr[text()='"+date+"']").click();
+    await page.locator(".react-calendar__year-view__months__month").nth(monthNumber-1).click();
+    await page.locator(`//abbr[text()=${date}]`).click();
 
-    // const inputs = page.locator(".react-date-picker__inputGroup input");
-    //     for (let i = 0; i <inputs.length; i++)
-    //     {
-    //         const value =inputs[i].getAttribute("value");
-    //         expect(value).toEqual(expectedList[i]);
-    //     }
+    const inputs = page.locator(".react-date-picker__inputGroup input");
+        for (let i = 0; i <inputs.length; i++)
+        {
+            const value =inputs[i].getAttribute("value");
+            expect(value).toEqual(expectedList[i]);
+        }
 });
