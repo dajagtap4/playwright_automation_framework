@@ -73,7 +73,12 @@ test('LogicBuilding_3', async ({ page }) => {
 
     const date = "20";
     const month = "February";
-    const year = "2025";
+    const year = 2020;
+
+   const months = [               
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
 
     const frame = page.frameLocator(".demo-frame");
     await frame.locator("#datepicker").click();
@@ -84,8 +89,10 @@ test('LogicBuilding_3', async ({ page }) => {
             const yearText = await frame.locator(".ui-datepicker-year").textContent();
             const yearNumber = parseInt(yearText?.trim() || "0");
             const monthText = await frame.locator(".ui-datepicker-month").textContent();
+            const currentMonthIndex = months.indexOf(monthText);
+            const targetMonthIndex = months.indexOf(month);
 
-            if(yearNumber === parseInt(year) && monthText === month)
+            if(yearNumber === year && monthText === month)
             {
                 const dateLocator = frame.locator("tbody tr td");
                 const count = await dateLocator.count();
@@ -105,66 +112,15 @@ test('LogicBuilding_3', async ({ page }) => {
 
             else if(!found)
             {
-                if(parseInt(year) < yearNumber)
+                if(year < yearNumber || (yearNumber === year && currentMonthIndex > targetMonthIndex))
                 {
                     await frame.locator(".ui-datepicker-prev.ui-corner-all").click();
                 }
 
-                if(parseInt(year) > yearNumber)
+                else if(year > yearNumber || (yearNumber === year && currentMonthIndex < targetMonthIndex))
                 {
                     await frame.locator(".ui-icon.ui-icon-circle-triangle-e").click();
                 }
             }   
-    }
-});
-
-
-test('LogicBuilding_4', async ({ page }) => {
-
-    await page.goto("https://jqueryui.com/datepicker/");
-
-    const date = "20";
-    const month = "February";
-    const year = 2024;               // Make this a number, parse once
-    const months = [                // Month names in order
-        "January", "February", "March", "April", "May", "June",
-        "July", "August", "September", "October", "November", "December"
-    ];
-
-    const frame = page.frameLocator(".demo-frame");
-    await frame.locator("#datepicker").click();
-
-    let found = false;
-
-    while (!found) {
-        const yearText = await frame.locator(".ui-datepicker-year").textContent();
-        const yearNumber = parseInt(yearText?.trim() || "0");
-        const monthText = await frame.locator(".ui-datepicker-month").textContent();
-        const currentMonthIndex = months.indexOf(monthText);
-        const targetMonthIndex = months.indexOf(month);
-
-        if (yearNumber === year && monthText === month) {
-            const dateLocator = frame.locator("tbody tr td:not(.ui-datepicker-other-month)");
-            const count = await dateLocator.count();
-
-            for (let i = 0; i < count; i++) {
-                const dateText = await dateLocator.nth(i).textContent();
-
-                if (dateText === date) {
-                    await dateLocator.nth(i).click();
-                    found = true;
-                    break;
-                }
-            }
-        } else {
-            // Navigate year and month properly
-            if (yearNumber > year || (yearNumber === year && currentMonthIndex > targetMonthIndex)) {
-                // Go to previous month
-                await frame.locator(".ui-datepicker-prev.ui-corner-all").click();
-            } else if (yearNumber < year || (yearNumber === year && currentMonthIndex < targetMonthIndex)) {
-                // Go to next month
-                await frame.locator(".ui-icon.ui-icon-circle-triangle-e").click();
-            }
-        }
     }
 });
