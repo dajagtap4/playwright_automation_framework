@@ -1,17 +1,20 @@
-// playwright.config.ts or .js
+// playwright.config.js
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
+
   testDir: './tests',
   timeout: 30000,
+  retries: 2,
+  reporter: 'dot',
+
   expect: {
     timeout: 50000,
   },
-  reporter: 'dot',
   use: {
     headless: false,
-    screenshot: 'on',
-    trace: 'on',
+    screenshot: 'off',
+    trace: 'off',
   },
   projects: [
     {
@@ -20,6 +23,6 @@ export default defineConfig({
         browserName: 'chromium',
       },
     },
-    // You can add more projects if needed (firefox, webkit, etc.)
   ],
+
 });
