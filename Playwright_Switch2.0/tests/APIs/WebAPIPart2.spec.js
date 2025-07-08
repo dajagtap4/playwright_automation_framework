@@ -51,6 +51,9 @@ test('Add Item to cart', async () => {
       
  });
 
+//"Login will be performed once in the beforeAll() hook 
+// and reused across all tests, ensuring the login process 
+// doesn't repeat for each test individually."
  test('place order', async () => {
 
     const productName = 'ZARA COAT 3';
