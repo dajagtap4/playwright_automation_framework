@@ -3,17 +3,27 @@ let webContext;
 
 test.beforeAll(async ({browser}) => {
 
+    // This creates a new browser context, which is like opening a fresh, 
+    // isolated browser window (similar to incognito mode).
+
     const context = await browser.newContext();
     const page = await context.newPage();
-      //login
+
+    // browser.newContext() → creates a clean context (no cookies, no localStorage).
+    // context.newPage() → opens a new tab within that context.
+    
+    //login
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator("#userEmail").fill("jagtapda2019@gmail.com");
     await page.locator("#userPassword").fill("Deepak@1994");
     await page.locator("[value='Login']").click();
     await page.waitForLoadState('networkidle');
 
+    // Below line saves the current session state 
+    // (including cookies, localStorage, sessionStorage) to a file named state.json.
     await context.storageState({path: 'state.json'});
     webContext = await browser.newContext({ storageState: 'state.json'});
+    //Above line creates a new browser context and loads the saved session from state.json
 })
 
 //"Login will be performed once in the beforeAll() hook 
