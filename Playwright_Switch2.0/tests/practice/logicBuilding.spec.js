@@ -145,3 +145,28 @@ test("LogicBuilding_4",async({page})=>
         }
     }
 });
+
+test("LogicBuilding_5",async({page})=>
+{
+    await page.goto("https://www.hyrtutorials.com/p/add-padding-to-containers.html");
+
+    const expectedText = "Yoshi Tannamuri";  //***if = "5000";
+
+    //locator of all rows 
+    const rows =  page.locator('#contactList tbody tr');
+    const count = await rows.count();
+
+    for(let i=0;i<count;i++){
+        const allTextContainInRow = await rows.nth(i).textContent();
+
+        if(allTextContainInRow?.includes(expectedText)) //***then allTextContainInRow === expectedText 
+        {
+            await rows.nth(i).locator('td input').click();
+            console.log(`✅ Clicked checkbox in row ${i}`);
+            break; //***then break should be remove.
+        }
+        else{
+            console.log(`❌ Row ${i} does not contain "${expectedText}".`);
+        }
+    }
+});
