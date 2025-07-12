@@ -1,0 +1,9 @@
+Xpath Axes - 
+
+//label[text()='Email']/following-sibling::input[1]
+//td[text()='Maria Anders']/preceding-sibling::td/child::input
+//label[text()='Email']/following-sibling::input[1]/parent::div
+//div[@class='container']/child::input[@type='text']
+//div[@class='container']/descendant::button
+//div[@class='buttons']/ancestor-or-self::div
+//label[text()='Password']/following::input[1]
