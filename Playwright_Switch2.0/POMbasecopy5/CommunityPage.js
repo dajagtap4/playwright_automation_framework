@@ -4,7 +4,7 @@ class CommunityPage{
         this.users =page.locator(".people-card__content__inner");
     }
 
-    async clikOnUserNameLink(){
+    async clikOnUserNameLink(username){
         await this.page.waitForLoadState('networkidle');
         await this.page.locator(".people-card__content__inner").last().waitFor();
 
@@ -16,14 +16,14 @@ class CommunityPage{
             const usersNames = usersLocator.nth(i).locator(">div:first-child>a>h3");
             const userText = await usersNames.textContent();
 
-            if(userText === "Leonard leo"){
+            if(userText === username){
                 await usersNames.click();
                 break;
             }
         }
     }
 
-    async clikMessageButton(){
+    async clikMessageButton(username){
         await this.page.waitForLoadState('networkidle');
         await this.page.locator(".people-card__content__inner").last().waitFor();
 
@@ -35,7 +35,7 @@ class CommunityPage{
             const usersNames = usersLocator.nth(i).locator(">div:first-child>a>h3");
             const userText = await usersNames.textContent();
 
-            if(userText === "Leonard leo"){
+            if(userText === username){
                 await usersLocator.nth(i).locator(">:last-child").click();
                 break;
             }
