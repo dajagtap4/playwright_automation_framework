@@ -13,8 +13,8 @@ async openCommunityPage() {
     await this.selectCommunity();
 }
 
-async selectCommunity(){
-
+async selectCommunity()
+    {
     const productList = this.products;
     const count = await productList.count();
 
@@ -26,7 +26,34 @@ async selectCommunity(){
                 await productList.nth(i).click();
                 break;
             }
-        }
-    }
+        }//for
+    }//selectCommunity
+
+
+
+
+
+
+async openConnectOption() {
+    await this.connect.hover();
+    await this.selectEvent();
 }
+
+async selectEvent()
+    {
+    const productList = this.products;
+    const count = await productList.count();
+
+    for(let i=0;i<count;i++)
+        {
+        const productText = await productList.nth(i).textContent();
+            if(productText === "Events")
+            {
+                await productList.nth(i).click();
+                break;
+            }
+        }//for
+    }//selectConnect
+
+}//class
 module.exports = {DashboardPage};

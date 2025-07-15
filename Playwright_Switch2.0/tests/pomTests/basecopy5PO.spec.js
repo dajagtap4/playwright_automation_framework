@@ -70,3 +70,20 @@
     await user.scheduleMeeting();
     
  });
+
+ test("Test 04 - calendar", async ({ page }) => {
+
+    const poManager = new POManager2(page);
+
+    // login
+    const login = poManager.getLoginPage();
+    await login.goTo();
+    await login.validLogin("jagtapdeepak@g.com","Deepak@1994");
+
+    // dashboard -> Connect -> Event
+    const dashboard = poManager.getDashboardPage();
+    await dashboard.openConnectOption();
+
+    const event = poManager.getEventPage();
+    await event.createEvent();
+ });
