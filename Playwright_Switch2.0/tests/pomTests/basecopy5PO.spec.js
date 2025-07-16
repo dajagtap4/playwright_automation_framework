@@ -86,4 +86,5 @@
 
     const event = poManager.getEventPage();
     await event.createEvent();
+    await event.selectDateFromCalendar();
  });
