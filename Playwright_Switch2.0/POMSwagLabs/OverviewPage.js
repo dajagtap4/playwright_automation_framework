@@ -11,6 +11,7 @@ constructor(page)
 
 async VerifyProductIsDisplayedAndClickOnFinish(productName)
 {
+    await this.page.waitForLoadState('networkidle');
     const count = await this.AvailableProducts.count();
 
     for(let i=0;i<count;i++)

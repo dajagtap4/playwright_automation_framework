@@ -46,7 +46,6 @@ class UserProfilePage {
     }
 
     async clickMessageButton(){
-        await this.page.waitForLoadState('networkidle');
         await this.messageButton.click();
     }
 
@@ -55,7 +54,8 @@ class UserProfilePage {
     }
 
     async enterTextAndSend(message) {
-        await this.textInput.waitFor({ state: 'visible' });
+        //await this.textInput.waitFor({ state: 'visible' });
+        await this.page.waitForTimeout(3000);
         await this.textInput.type(message);
 
         // Ensure the button is fully ready
@@ -64,9 +64,11 @@ class UserProfilePage {
         await expect(this.send).toBeEnabled();
 
         // Now perform a real click
-        await this.page.waitForTimeout(5000);
+        //await this.page.waitForTimeout(3000);
         //await this.page.pause();
         await this.send.click({ force: true });
+        console.log("Test passed....");
+        
     }
 
 }

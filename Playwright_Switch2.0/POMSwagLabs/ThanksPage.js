@@ -14,8 +14,11 @@ constructor(page)
 
 async verifyThanksPage()
 {
+    await this.page.waitForLoadState('networkidle');
     const thanksText2 = await this.thanksText.textContent();
     expect(thanksText2).toEqual('Thank you for your order!');
+    console.log("Order Placed successfully");
+    
     await this.page.close();
 }
 

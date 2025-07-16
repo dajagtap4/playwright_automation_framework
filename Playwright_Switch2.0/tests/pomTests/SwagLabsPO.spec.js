@@ -1,7 +1,7 @@
  const {test, expect} = require('@playwright/test');
  const { POManager } = require('../../POMSwagLabs/POManager');
 
-  test("SwaglabsPOM", async ({ page }) => {
+  test("SwaglabsPOM test", async ({ page }) => {
 
     const poManager = new POManager(page);
     const ExpectedProduct = "Sauce Labs Bike Light";
@@ -26,10 +26,10 @@
 
     //verify product listed on overview page
     const overview = poManager.getOverviewPage();
-    overview.VerifyProductIsDisplayedAndClickOnFinish(ExpectedProduct);
+    await overview.VerifyProductIsDisplayedAndClickOnFinish(ExpectedProduct);
 
     //verify thanks page
     const thanks = poManager.getThanksPage();
-    thanks.verifyThanksPage();
+    await thanks.verifyThanksPage();
 
   });
