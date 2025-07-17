@@ -1,3 +1,11 @@
+//=============================================
+// this is all end to end api response 
+// Login api
+// add to cart api
+// go to cart api
+// checkout and placeorder api
+//=============================================
+
 const {test, expect, request} = require('@playwright/test');
 const {APIUtils} = require('../../utils/APIUtils');
 const loginPayLoad = {userEmail: "jagtapda2019@gmail.com", userPassword: "Deepak@1994"};

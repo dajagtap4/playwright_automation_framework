@@ -1,3 +1,7 @@
+// we are covering get post put delete methods 
+// this is very basic concept.
+//===============================================
+
 const { test, expect } = require('@playwright/test');
 //const { request } = require('node:http');
 
