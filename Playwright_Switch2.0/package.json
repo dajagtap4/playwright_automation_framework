@@ -6,7 +6,7 @@
   "scripts": {
     "regression": "npx playwright test",
     "E2E": "npx playwright test ./tests/WithoutPOM/ClientAppE2E.spec.js --project=chromium",
-    "test": "npx playwright test ./tests/APIs/WebAPIPart1.spec.js --project=chromium --headed",
+    "API": "npx playwright test ./tests/APIs --project=chromium --headed",
     "basecopy": "npx playwright test ./tests/pomTests/basecopy5PO.spec.js --project=chromium --headed",
     "swag_labs": "npx playwright test ./tests/pomTests/SwagLabsPO.spec.js --project=chromium --headed",
     "client_app_fixture": "npx playwright test ./tests/pomTests/ClientAppPO_Fixture.spec.js --project=chromium --headed",
