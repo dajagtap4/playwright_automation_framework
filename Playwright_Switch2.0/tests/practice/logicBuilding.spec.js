@@ -1,5 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
+test.describe.parallel('Login Suite', () => {
+
 //Search iphone -> add to cart (Lowest price).
 test('LogicBuilding_1', async ({ page }) => {
 
@@ -169,4 +171,6 @@ test("LogicBuilding_5",async({page})=>
             console.log(`❌ Row ${i} does not contain "${expectedText}".`);
         }
     }
+});
+
 });
