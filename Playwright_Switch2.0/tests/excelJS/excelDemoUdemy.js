@@ -26,6 +26,13 @@ async function readExcel(worksheet,searchText) {
     //
     return output;
 }
-writeExcel("Orange",3434,{rowChange:0,colChange:2},'/Users/deepak.jagtap/Downloads/excelDownloadTest.xlsx');
+
+// https://rahulshettyacademy.com/upload-download-test/index.html
+// goto above link and download excel file and rename file to "excelDownloadTest"
+// then update path as per system(laptop).
+// GL laptop path -/Users/deepak.jagtap/Downloads/excelDownloadTest.xlsx
+// Personal laptop path - C:/Users/Deepak/Downloads/excelDownloadTest.xlsx
+
+writeExcel("Kivi",1000,{rowChange:0,colChange:2},'C:/Users/Deepak/Downloads/excelDownloadTest.xlsx');
 
 
