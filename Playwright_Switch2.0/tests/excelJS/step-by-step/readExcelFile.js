@@ -1,5 +1,6 @@
 // read data from excel file and print all cell values
-// ====================================================
+// run with command -> node readExcelFile.js
+// ==========================================================
 
 const ExcelJs = require('exceljs');
 
