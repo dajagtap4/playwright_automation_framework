@@ -40,7 +40,20 @@ async SubmitAndGetOrderId()
 {
  await this.submit.click();
  await expect(this.orderConfirmationText).toHaveText(" Thankyou for the order. ");
- return await this.orderId.textContent();
+ //return await this.orderId.textContent();
+ 
+// use below instead of above if using same user
+//  above will work if we work with diff users in utils\placeorderTestData.json
+
+ const orderIdElements = this.page.locator('.em-spacer-1 .ng-star-inserted');
+ const count = await orderIdElements.count();
+
+ if (count !== 1) {
+  console.warn(`⚠️ Expected 1 order ID, but found ${count}. Using the first one.`);
+ }
+
+ return await orderIdElements.first().textContent();
+
 }
 }
 module.exports = {OrdersReviewPage};
