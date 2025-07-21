@@ -47,5 +47,10 @@ async function readExcelFile(filePath)
         });
     }
 
+// https://rahulshettyacademy.com/upload-download-test/index.html
+// goto above link and download excel file and rename file to "excelDownloadTest"
+// then update path as per system(laptop).
+// GL laptop path -/Users/deepak.jagtap/Downloads/excelDownloadTest.xlsx
+// Personal laptop path - C:/Users/Deepak/Downloads/excelDownloadTest.xlsx
 
-writeExcel("Gulab",1234567890,{rowChange:0,colChange:2},'/Users/deepak.jagtap/Downloads/excelDownloadTest.xlsx');
+writeExcel("Apple",12,{rowChange:0,colChange:2},'/Users/deepak.jagtap/Downloads/excelDownloadTest.xlsx');
