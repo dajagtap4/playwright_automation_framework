@@ -1,7 +1,7 @@
 // login-fixture.js
-const base = require('@playwright/test');
+const { test: base } = require('@playwright/test');
 
-const test = base.test.extend({
+exports.test = base.extend({
   loginPage: async ({ page }, use) => {
     await page.goto('https://www.saucedemo.com');
     await page.fill('#user-name', 'standard_user');
@@ -11,4 +11,4 @@ const test = base.test.extend({
   }
 });
 
-module.exports = test;
+// module.exports = test;

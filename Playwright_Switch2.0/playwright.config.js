@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 
-const env = process.env.ENV || 'local';  
+const env = process.env.ENV; // Set the environment variable for the config file
 process.env.ENV = env;
 
 dotenv.config({

@@ -1,15 +1,16 @@
- const {test, expect} = require('@playwright/test');
  const { POManager } = require('../../POMSwagLabs/POManager');
+ const { test, expect } = require('../../Fixtures/swaglabs.fixture');
 
-  test("SwaglabsPOM test", async ({ page }) => {
+  test("SwaglabsPOM test", async ({page,login}) => {
 
     const poManager = new POManager(page);
     const ExpectedProduct = "Sauce Labs Bike Light";
 
-    //login
-    const login = poManager.getLoginPage();
-    await login.goTo();
-    await login.validLogin("standard_user","secret_sauce");
+    // login
+    // Remove below lines (the 'login' fixture already logs in for you):
+    // const login = poManager.getLoginPage();
+    // await login.goTo();
+    // await login.validLogin("standard_user","secret_sauce");
 
     // add item to cart
     const dashboard = poManager.getDashboardPage();
