@@ -12,7 +12,9 @@ constructor(page)
 
 async goTo()
 {
-    await this.page.goto("https://basecopy5.staging.pg-test.com/v2/");
+    //await this.page.goto("https://basecopy5.staging.pg-test.com/v2/"); 
+    // taking url from (path ->) env/.env.local file
+    await this.page.goto(process.env.BASE_URL);
 }
 
 async validLogin(username, password) {

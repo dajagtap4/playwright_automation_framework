@@ -23,6 +23,7 @@
     "prettier": "^3.6.2"
   },
   "dependencies": {
+    "dotenv": "^17.2.0",
     "exceljs": "^4.4.0"
   }
 }

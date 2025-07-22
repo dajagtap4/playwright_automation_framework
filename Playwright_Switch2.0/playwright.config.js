@@ -1,5 +1,17 @@
-// playwright.config.js
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from "dotenv";
+
+const env = process.env.ENV || 'local';  
+process.env.ENV = env;
+
+dotenv.config({
+  path: `./env/.env.${env}`,
+});
+
+// below can run from test level also see -> tests\practice\envDemo.spec.js
+// console.log(`✅ Loaded environment: ${env}`);
+// console.log(`🌐 BASE_URL: ${process.env.BASE_URL}`);
+
 
 export default defineConfig({
 
