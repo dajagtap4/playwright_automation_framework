@@ -9,7 +9,7 @@ constructor(page)
     this.checkout = page.locator("#checkout");
 }
 
-async VerifyProductIsDisplayedAndClickOnCheckout(productName)
+async isProductInCart(productName)
 {
     const count = await this.productsInCart.count();
 
@@ -18,16 +18,14 @@ async VerifyProductIsDisplayedAndClickOnCheckout(productName)
       const ProductNameIncart = await this.productsInCart.nth(i).textContent();
       if(ProductNameIncart === productName)
       {
-        //click on the Checkbox button
-        await this.checkout.click();
+        return true;
       }
     }
-   
-    // await this.cartProducts.waitFor();
-    // const bool =await this.page.locator("h3:has-text('"+productName+"')").isVisible();
-    // //const bool =await this.getProductLocator(productName).isVisible();
-    // expect(bool).toBeTruthy();
+    return false;
+}
 
+async clickCheckout() {
+  await this.checkout.click();
 }
 
 }

@@ -27,5 +27,10 @@ async navigateToCart()
     await this.cart.click();
 }
 
+getCartBadge()
+{
+    return this.page.locator(".shopping_cart_badge");
+}
+
 }
 module.exports = {DashboardPage};

@@ -18,7 +18,6 @@ async enterInfoAndContinue()
     await this.LastName.fill("Jagtap");
     await this.pincode.fill("111111");
     await this.continue.click();
-    await this.page.waitForTimeout(2000);
 }
 
 }

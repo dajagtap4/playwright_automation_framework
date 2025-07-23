@@ -9,7 +9,7 @@ constructor(page)
     this.finish = page.locator('.cart_footer button:nth-of-type(2)');
 }
 
-async VerifyProductIsDisplayedAndClickOnFinish(productName)
+async isProductDisplayed(productName)
 {
     await this.page.waitForLoadState('networkidle');
     const count = await this.AvailableProducts.count();
@@ -19,16 +19,14 @@ async VerifyProductIsDisplayedAndClickOnFinish(productName)
       const ProductsInCheckoutOverview = await this.AvailableProducts.nth(i).textContent();
       if(ProductsInCheckoutOverview === productName)
       {
-        //click on the Checkbox button
-        await this.finish.click();
+        return true;
       }
     }
    
-    // await this.cartProducts.waitFor();
-    // const bool =await this.page.locator("h3:has-text('"+productName+"')").isVisible();
-    // //const bool =await this.getProductLocator(productName).isVisible();
-    // expect(bool).toBeTruthy();
+  return false;
 }
-
+  async clickFinish() { 
+    await this.finish.click();
+  } 
 }
 module.exports = {OverviewPage};
