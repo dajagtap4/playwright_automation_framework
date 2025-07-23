@@ -6,17 +6,20 @@
  const { POManager } = require('../../POMSwagLabs/POManager');
  const { test } = require('../../Fixtures/swaglabs.fixture');
  const { expect } = require('@playwright/test');
+ const { urls, messages } = require('../../utils/urls');
+ const { products } = require('../../utils/testData');
+ const jsonData = require('../../utils/testData.json');
  
   test("SwaglabsPOM test", async ({page,login}) => {
 
     // Post-login assertion: check for a dashboard element or URL
-    await expect(page).toHaveURL("https://www.saucedemo.com/inventory.html"); 
+    await expect(page).toHaveURL(urls.dashboard); 
 
     const poManager = new POManager(page);
-    const ExpectedProduct = "Sauce Labs Bike Light";
+    const ExpectedProduct = products.expectedProduct;
 
     // login
-    // we are using login fixture from swaglabs.fixture.js, so below code is not needed.
+    // we are using login fixture from swaglabs.fixture.js, instead of below commented code
     // const login = poManager.getLoginPage();
     // await login.goTo();
     // await login.validLogin("standard_user","secret_sauce");
@@ -31,7 +34,7 @@
     // then navigate to cart page
     await dashboard.navigateToCart();
     // and verify URL
-    await expect(page).toHaveURL("https://www.saucedemo.com/cart.html");
+    await expect(page).toHaveURL(urls.cart);
 
     //verify product in cart
     const cart = poManager.getCartPage();
@@ -40,13 +43,13 @@
     // Continue (Click) with checkout
     await cart.clickCheckout();
     // verify checkout page URL to ensure we are on the right page
-    await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-one.html");
+    await expect(page).toHaveURL(urls.checkoutStepOne);
 
     // Enter my info and continue
     const info = poManager.getMyInfoPage();
     await info.enterInfoAndContinue();
     // verify overview page URL to ensure we are on the right page
-    await expect(page).toHaveURL("https://www.saucedemo.com/checkout-step-two.html");
+    await expect(page).toHaveURL(urls.checkoutStepTwo);
 
     //verify product listed on overview page
     const overview = poManager.getOverviewPage();
@@ -58,6 +61,6 @@
     //verify thanks text on complete page
     const thanks = poManager.getThanksPage();
     const actualThanksText  = await thanks.verifyThanksPage();
-    expect(actualThanksText).toEqual('Thank you for your order!');
+    expect(actualThanksText).toEqual(jsonData.messages.orderSuccess);
 
   });
