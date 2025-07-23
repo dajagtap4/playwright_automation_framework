@@ -6,7 +6,7 @@
  //https://globallogic.udemy.com/course/playwright-tutorials-automation-testing/learn/lecture/31111052#overview
 for(const data of dataset)
 {
- test(`Client App login for ${data.productName}`, async ({ page }) => {
+ test(`@web Client App login for ${data.productName}`, async ({ page }) => {
     
     const poManager = new POManager(page);
     const products = page.locator(".card-body");

@@ -10,7 +10,7 @@
  const { products } = require('../../utils/testData');
  const jsonData = require('../../utils/testData.json');
  
-  test("SwaglabsPOM test", async ({page,login}) => {
+  test("@web SwaglabsPOM test", async ({page,login}) => {
 
     // Post-login assertion: check for a dashboard element or URL
     await expect(page).toHaveURL(urls.dashboard); 

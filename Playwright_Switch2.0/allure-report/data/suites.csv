@@ -1,5 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4864","Client App login","chromium","Tue Jun 10 14:34:21 IST 2025","passed","Tue Jun 10 14:34:26 IST 2025","","pomTests\ClientAppPO.spec.js","",""
-"","7087","Client App login for ZARA COAT 3","chromium","Tue Jun 10 14:34:06 IST 2025","passed","Tue Jun 10 14:34:13 IST 2025","","pomTests\ClientAppPO.spec.js","",""
-"","6367","Client App login for ADIDAS ORIGINAL","chromium","Tue Jun 10 14:34:14 IST 2025","passed","Tue Jun 10 14:34:21 IST 2025","","pomTests\ClientAppPO.spec.js","",""
-"","7460","E2E","chromium","Fri Jun 06 19:40:30 IST 2025","passed","Fri Jun 06 19:40:38 IST 2025","","ClientAppE2E.spec.js","",""
+"","3504","@web SwaglabsPOM test","chromium","Wed Jul 23 19:36:03 IST 2025","passed","Wed Jul 23 19:36:07 IST 2025","","pomTests\SwagLabsPO.spec.js","",""

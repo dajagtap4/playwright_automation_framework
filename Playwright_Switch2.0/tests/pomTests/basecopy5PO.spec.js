@@ -10,7 +10,7 @@
 
 credentials.forEach(({ email, password }) => {
 
- test(`Test 01 - basecopy5 [${email}]`, async ({ page }) => {
+ test(`@web Test 01 - basecopy5 [${email}]`, async ({ page }) => {
 
     const poManager = new POManager2(page);
 
@@ -34,7 +34,7 @@ credentials.forEach(({ email, password }) => {
 
  });
 
- test(`Test 02 - basecopy5 [${email}]`, async ({ page }) => {
+ test(`@web Test 02 - basecopy5 [${email}]`, async ({ page }) => {
 
     const poManager = new POManager2(page);
 
@@ -57,7 +57,7 @@ credentials.forEach(({ email, password }) => {
 
  });
 
- test(`Test 03 - Schedule meeting [${email}]`, async ({ page }) => {
+ test(`@web Test 03 - Schedule meeting [${email}]`, async ({ page }) => {
 
     const poManager = new POManager2(page);
 
@@ -80,7 +80,7 @@ credentials.forEach(({ email, password }) => {
     
  });
 
- test(`Test 04 - calendar [${email}]`, async ({ page }) => {
+ test(`@web Test 04 - calendar [${email}]`, async ({ page }) => {
 
     const poManager = new POManager2(page);
 

@@ -5,7 +5,7 @@
   
   //udemy 80. How to pass test data as fixture by extend test annotation behaviour
   //https://globallogic.udemy.com/course/playwright-tutorials-automation-testing/learn/lecture/31111054#overview
- customtest("Client App login", async ({page,testDataForOrder2})=>
+ customtest("@web Client App login", async ({page,testDataForOrder2})=>
  {
    const poManager = new POManager(page);
   

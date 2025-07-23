@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 
-const env = process.env.ENV; // Set the environment variable for the config file
+const env = process.env.ENV || 'saucelab'; // Set the environment variable for the config file
 process.env.ENV = env;
 
 dotenv.config({
@@ -17,7 +17,8 @@ export default defineConfig({
 
   testDir: './tests',
   timeout: 30000,
-  reporter: 'dot',
+  reporter: [['line'], ['allure-playwright']],
+  //reporter:'html',
   workers: 6,  
   fullyParallel: true,
   expect: {

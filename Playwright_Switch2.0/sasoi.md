@@ -20,28 +20,28 @@
   this.userName = page.locator("#user-name");
   ```
 
-### 2. Use Playwright Fixtures for Login
+### 2. Use Playwright Fixtures for Login✅
 - Move login logic to a fixture to avoid repeating login steps in every test.
 - This enables pre-authenticated states and faster tests.
 
-### 3. Store Config in Environment Variables
+### 3. Store Config in Environment Variables✅
 - URLs and credentials should be in `.env` or config files, not hardcoded.
 - Use `process.env` to access them in your code.
 
-### 4. Add Assertions After Login
+### 4. Add Assertions After Login✅
 - Always verify successful login with an assertion (e.g., check for a dashboard element).
 
 ### 5. Use Descriptive Test Names and Grouping
 - Use `test.describe` to group related tests.
 - Make test names clear and specific.
 
-### 6. Separate Test Data
+### 6. Separate Test Data✅
 - Store credentials and other test data in a separate file or module.
 
 ### 7. Integrate Reporting
 - Use Playwright’s built-in reporters or Allure for better test reports.
 
-### 8. Reduce Code Duplication
+### 8. Reduce Code Duplication✅
 - Move repeated code (like login) to fixtures or helper functions.
 
 ### 9. Parameterize Tests Where Needed
@@ -92,11 +92,11 @@ test('should be logged in', async ({ page, login }) => {
 |---------------------|---------------|-----------------------------------------------|
 | POM                 | Good          | Keep using                                    |
 | Selectors           | Mixed         | Prefer CSS over XPath                         |
-| Login Handling      | In tests      | Move to fixture                               |
-| Config Management   | Hardcoded     | Use env/config files                          |
-| Assertions          | Basic         | Add post-login checks                         |
+| Login Handling✅      | In tests      | Move to fixture                               |
+| Config Management✅   | Hardcoded     | Use env/config files                          |
+| Assertions✅          | Basic         | Add post-login checks                         |
 | Reporting           | ?             | Use Playwright reporters/Allure               |
-| Test Data           | Inline        | Move to separate file                         |
+| Test Data✅           | Inline        | Move to separate file                         |
 
 ---
 
