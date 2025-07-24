@@ -3,7 +3,7 @@
 // by code (not api) we will go to order page and verify order is present 
 // in order list, then click on view button on that perticular order. 
 
-// in this file e have only one test suppose the will be multiple tests 
+// in this file we have only one test suppose there will be multiple tests 
 // then all tests run parallelly but for every test that order api token will in use.
 
 // in this file (Episode 2) note that (for multiple tests) order api will in use for 

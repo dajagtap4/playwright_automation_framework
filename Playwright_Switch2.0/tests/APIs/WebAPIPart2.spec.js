@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 let webContext;
 
+test.describe.serial('E2E Tests in same browser', () => {
 test.beforeAll(async ({browser}) => {
 
     // This creates a new browser context, which is like opening a fresh, 
@@ -12,19 +13,19 @@ test.beforeAll(async ({browser}) => {
     // browser.newContext() → creates a clean context (no cookies, no localStorage).
     // context.newPage() → opens a new tab within that context.
     
-    //login
+    // login
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator("#userEmail").fill("jagtapda2019@gmail.com");
     await page.locator("#userPassword").fill("Deepak@1994");
     await page.locator("[value='Login']").click();
     await page.waitForLoadState('networkidle');
 
-    // Below line saves the current session state 
+    // Below line create file state.json and saves the current session state.
     // (including cookies, localStorage, sessionStorage) to a file named state.json.
     await context.storageState({path: 'state.json'});
     webContext = await browser.newContext({ storageState: 'state.json'});
     //Above line creates a new browser context and loads the saved session from state.json
-})
+});
 
 //"Login will be performed once in the beforeAll() hook 
 // and reused across all tests, ensuring the login process 
@@ -140,7 +141,7 @@ test('Add Item to cart', async () => {
     const titles = await page.locator(".card-body b").allTextContents();
     console.log(titles);
 
-})
+});
 
 //"Login will be performed once in the beforeAll() hook 
 // and reused across all tests, ensuring the login process 
@@ -155,4 +156,66 @@ test('@API Test case 4', async () => {
     const titles = await page.locator(".card-body b").allTextContents();
     console.log(titles); 
   
- })
+ });
+
+test('@API Test case 15', async () => {
+    const page = await webContext.newPage();
+
+    await page.goto("https://rahulshettyacademy.com/client");
+    await page.waitForLoadState('networkidle');
+    const products = page.locator(".card-body");
+
+    const titles = await page.locator(".card-body b").allTextContents();
+    console.log(titles); 
+  
+ });
+
+ test('@API Test case 14', async () => {
+    const page = await webContext.newPage();
+
+    await page.goto("https://rahulshettyacademy.com/client");
+    await page.waitForLoadState('networkidle');
+    const products = page.locator(".card-body");
+
+    const titles = await page.locator(".card-body b").allTextContents();
+    console.log(titles); 
+  
+ });
+
+ test('@API Test case 13', async () => {
+    const page = await webContext.newPage();
+
+    await page.goto("https://rahulshettyacademy.com/client");
+    await page.waitForLoadState('networkidle');
+    const products = page.locator(".card-body");
+
+    const titles = await page.locator(".card-body b").allTextContents();
+    console.log(titles); 
+  
+ });
+
+ test('@API Test case 12', async () => {
+    const page = await webContext.newPage();
+
+    await page.goto("https://rahulshettyacademy.com/client");
+    await page.waitForLoadState('networkidle');
+    const products = page.locator(".card-body");
+
+    const titles = await page.locator(".card-body b").allTextContents();
+    console.log(titles); 
+  
+ });
+
+ test('@API Test case 11', async () => {
+    const page = await webContext.newPage();
+
+    await page.goto("https://rahulshettyacademy.com/client");
+    await page.waitForLoadState('networkidle');
+    const products = page.locator(".card-body");
+
+    const titles = await page.locator(".card-body b").allTextContents();
+    console.log(titles); 
+  
+ });
+ 
+});
