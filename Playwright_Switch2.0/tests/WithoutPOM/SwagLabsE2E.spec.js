@@ -1,5 +1,5 @@
  const {test, expect} = require('@playwright/test');
- const { POManager } = require('../../POMSwagLabs/POManager');
+ const { POManager } = require('../../pageObjects/POMSwagLabs/POManager');
 
   test("Swaglabs", async ({ page }) => {
 

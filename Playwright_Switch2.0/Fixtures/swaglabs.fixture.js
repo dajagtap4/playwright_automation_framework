@@ -1,6 +1,6 @@
 const { test: base } = require('@playwright/test');
-const { LoginPage } = require('../POMSwagLabs/LoginPage');
-const { DashboardPage } = require('../POMSwagLabs/DashboardPage');
+const { LoginPage } = require('../pageObjects/POMSwagLabs/LoginPage.js');
+const { DashboardPage } = require('../pageObjects/POMSwagLabs/DashboardPage');
 
 // Extend the base test with a login fixture
 exports.test = base.extend({

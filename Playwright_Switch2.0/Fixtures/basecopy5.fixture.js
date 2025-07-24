@@ -1,5 +1,5 @@
 const {test: base} = require('@playwright/test');
-const {LoginPage} = require('../POMbasecopy5/LoginPage');
+const {LoginPage} = require('../pageObjects/POMbasecopy5/LoginPage');
 
 exports.test = base.extend({
     async login2({page}, use) {

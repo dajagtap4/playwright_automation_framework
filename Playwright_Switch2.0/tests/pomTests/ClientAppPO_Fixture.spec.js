@@ -1,5 +1,5 @@
  const {test, expect} = require('@playwright/test');
- const { POManager } = require('../../POMClientApp/POManager');
+ const { POManager } = require('../../pageObjects/POMClientApp/POManager');
  const {customtest} = require('../../utils/test-base');  
   
   

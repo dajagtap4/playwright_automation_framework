@@ -3,7 +3,7 @@
 // Jenkins build - http://localhost:8080/job/playwright_July_2025/32/console
 // ===========================================================================
 
- const { POManager } = require('../../POMSwagLabs/POManager');
+ const { POManager } = require('../../pageObjects/POMSwagLabs/POManager');
  const { test } = require('../../Fixtures/swaglabs.fixture');
  const { expect } = require('@playwright/test');
  const { urls, messages } = require('../../utils/urls');

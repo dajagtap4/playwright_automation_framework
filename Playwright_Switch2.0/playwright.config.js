@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 
-const env = process.env.ENV || 'saucelab'; // Set the environment variable for the config file
+const env = process.env.ENV || 'basecopy5'; // Set the environment variable for the config file
 process.env.ENV = env;
 
 dotenv.config({
@@ -17,9 +17,9 @@ export default defineConfig({
 
   testDir: './tests',
   timeout: 30000,
-  reporter: [['line'], ['allure-playwright']],
+  reporter: [['line'],['html'],['allure-playwright']],
   //reporter:'html',
-  workers: 6,  
+  workers: 4, // Adjust the number of workers based on your system capabilities
   fullyParallel: true,
   expect: {
     timeout: 50000,

@@ -1,5 +1,6 @@
  const {test, expect} = require('@playwright/test');
- const { POManager2 } = require('../../POMbasecopy5/POManager2');
+ const { POManager2 } = require('../../pageObjects/POMbasecopy5/POManager2');
+ const { BASE_URL } = require('../../utils/urls');
 
  // data-driven credentials
    const credentials = [
@@ -8,7 +9,12 @@
       // if we add 3 objects then same test will run 3 times with different credentials.
 ];
 
-credentials.forEach(({ email, password }) => {
+for (const { email, password } of credentials) {
+
+// ✅ Describe block to parallelize tests
+test.describe.parallel('@web basecopy5 full suite', () => {
+
+// credentials.forEach(({ email, password }) => {
 
  test(`@web Test 01 - basecopy5 [${email}]`, async ({ page }) => {
 
@@ -16,7 +22,7 @@ credentials.forEach(({ email, password }) => {
 
     // login
     const login = poManager.getLoginPage();
-    await login.goTo();
+    await login.goTo(BASE_URL.basecopy5);
     await login.validLogin(email, password);
 
     // dashboard -> Connect -> Community
@@ -40,7 +46,7 @@ credentials.forEach(({ email, password }) => {
 
     // login
     const login = poManager.getLoginPage();
-    await login.goTo();
+    await login.goTo(BASE_URL.basecopy5);
     await login.validLogin(email, password);
 
     // dashboard -> Connect -> Community
@@ -63,7 +69,7 @@ credentials.forEach(({ email, password }) => {
 
     // login
     const login = poManager.getLoginPage();
-    await login.goTo();
+    await login.goTo(BASE_URL.basecopy5);
     await login.validLogin(email, password);
 
     // dashboard -> Connect -> Community
@@ -86,7 +92,7 @@ credentials.forEach(({ email, password }) => {
 
     // login
     const login = poManager.getLoginPage();
-    await login.goTo();
+    await login.goTo(BASE_URL.basecopy5);
     await login.validLogin(email, password);
 
     // dashboard -> Connect -> Event
@@ -96,5 +102,6 @@ credentials.forEach(({ email, password }) => {
     const event = poManager.getEventPage();
     await event.createEvent();
     await event.selectDateFromCalendar();
+  });
  });
-});
+};

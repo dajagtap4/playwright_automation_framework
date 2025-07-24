@@ -17,7 +17,7 @@ async createEvent(){
     await this.dropdown.click();
     await this.selectEventTypeFromDropdown("jk");
     await this.createEvent_ButtonOnPopup.click();
-    await this.page.pause();
+    //await this.page.pause();
 }
 
 // calendar elements are not available on DOM so using direct .fill();
