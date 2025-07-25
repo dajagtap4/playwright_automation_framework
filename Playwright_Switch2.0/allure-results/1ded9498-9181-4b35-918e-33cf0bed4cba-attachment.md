@@ -1,0 +1,1073 @@
+# Test info
+
+- Name: update resume on naukari fro account Primary
+- Location: C:\Users\Deepak\Desktop\projects\playwright_automation_framework\Playwright_Switch2.0\tests\naukari\naukari.spec.js:6:3
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('[type=submit]') resolved to 2 elements:
+    1) <button type="submit" class="btn-primary loginButton">Login</button> aka getByRole('button', { name: 'Login', exact: true })
+    2) <input type="submit" title="Get link" value="Get link" class="wdgt-form-btn"/> aka getByRole('button', { name: 'Get link' })
+
+Call log:
+  - waiting for locator('[type=submit]')
+
+    at C:\Users\Deepak\Desktop\projects\playwright_automation_framework\Playwright_Switch2.0\tests\naukari\naukari.spec.js:16:41
+```
+
+# Page snapshot
+
+```yaml
+- link "Naukri Logo":
+  - /url: https://www.naukri.com
+  - img "Naukri Logo"
+- navigation:
+  - list:
+    - listitem:
+      - link "Jobs":
+        - /url: https://www.naukri.com
+      - list:
+        - listitem: Popular categories
+        - listitem:
+          - link "IT jobs":
+            - /url: https://www.naukri.com/it-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Sales jobs":
+            - /url: https://www.naukri.com/sales-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Marketing jobs":
+            - /url: https://www.naukri.com/marketing-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Data Science jobs":
+            - /url: https://www.naukri.com/data-science-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "HR jobs":
+            - /url: https://www.naukri.com/hr-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Engineering jobs":
+            - /url: https://www.naukri.com/engineering-jobs?src=gnbjobs_homepage_srch
+      - list:
+        - listitem: Jobs in demand
+        - listitem:
+          - link "Fresher jobs":
+            - /url: https://www.naukri.com/fresher-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "MNC jobs":
+            - /url: https://www.naukri.com/mnc-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Remote jobs":
+            - /url: https://www.naukri.com/remote-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Work from home jobs":
+            - /url: https://www.naukri.com/work-from-home-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Walk-in jobs":
+            - /url: https://www.naukri.com/walkin-jobs?src=gnbjobs_homepage_srch
+        - listitem:
+          - link "Part-time jobs":
+            - /url: https://www.naukri.com/part-time-jobs?src=gnbjobs_homepage_srch
+      - list:
+        - listitem: Jobs by location
+        - listitem:
+          - link "Jobs in Delhi":
+            - /url: https://www.naukri.com/jobs-in-delhi-ncr
+        - listitem:
+          - link "Jobs in Mumbai":
+            - /url: https://www.naukri.com/jobs-in-mumbai
+        - listitem:
+          - link "Jobs in Bangalore":
+            - /url: https://www.naukri.com/jobs-in-bangalore
+        - listitem:
+          - link "Jobs in Hyderabad":
+            - /url: https://www.naukri.com/jobs-in-hyderabad-secunderabad
+        - listitem:
+          - link "Jobs in Chennai":
+            - /url: https://www.naukri.com/jobs-in-chennai
+        - listitem:
+          - link "Jobs in Pune":
+            - /url: https://www.naukri.com/jobs-in-pune
+    - listitem:
+      - link "Companies":
+        - /url: https://www.naukri.com/companies-hiring-in-india?src=gnbCompanies_homepage_srch
+      - list:
+        - listitem: Explore categories
+        - listitem:
+          - link "Unicorn":
+            - /url: https://www.naukri.com/unicorn-companies-in-india-cat102?title=Unicorns%20actively%20hiring&src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "MNC":
+            - /url: https://www.naukri.com/mnc-companies-in-india-cat101?title=MNCs%20actively%20hiring&src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "Startup":
+            - /url: https://www.naukri.com/startup-companies-in-india-cat103?title=Startups%20actively%20hiring&src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "Product based":
+            - /url: https://www.naukri.com/product-companies-in-india-cat106?title=Product%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "Internet":
+            - /url: https://www.naukri.com/internet-companies-in-india-cat105?title=Internet%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+      - list:
+        - listitem: Explore collections
+        - listitem:
+          - link "Top companies":
+            - /url: https://www.naukri.com/companies-hiring-in-india?src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "IT companies":
+            - /url: https://www.naukri.com/it-companies-in-india-cat116?src=gnbCompanies_homepage_srch&title=IT%20Companies%20Hiring
+        - listitem:
+          - link "Fintech companies":
+            - /url: https://www.naukri.com/fintech-and-payments-companies-in-india-cat108?title=Fintech%20%26%20Payments%20companies%20actively%20hiring&src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "Sponsored companies":
+            - /url: https://www.naukri.com/allcompanies?searchType=standardLogo&title=Sponsored+companies&branding=%257B%2522pagename%2522%253A%2522ni-desktop-standard-viewAll%2522%257D&pageNo=1&qcount=47&src=gnbCompanies_homepage_srch
+        - listitem:
+          - link "Featured companies":
+            - /url: https://www.naukri.com/allcompanies?searchType=premiumLogo&title=Featured+companies+actively+hiring&branding=%257B%2522pagename%2522%253A%2522ni-desktop-premium-viewAll%2522%257D&pageNo=1&qcount=47&src=gnbCompanies_homepage_srch
+      - list:
+        - listitem:
+          - text: Research companies by
+          - img
+          - text: Ambitionbox
+        - listitem:
+          - link "Interview questions":
+            - /url: https://www.ambitionbox.com/interviews?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+        - listitem:
+          - link "Company salaries":
+            - /url: https://www.ambitionbox.com/salaries?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+        - listitem:
+          - link "Company reviews":
+            - /url: https://www.ambitionbox.com/reviews?utm_source=naukri&utm_medium=desktop&utm_campaign=gnb
+        - listitem:
+          - link "Salary Calculator":
+            - /url: https://www.ambitionbox.com/salaries/take-home-salary-calculator?utm_campaign=gnb&utm_source=naukri&utm_medium=desktop
+    - listitem:
+      - link "Services":
+        - /url: https://resume.naukri.com/?fftid=100001
+      - list:
+        - listitem: Resume writing
+        - listitem:
+          - link "Text resume":
+            - /url: https://resume.naukri.com/resume-writing-services?fftid=101001
+        - listitem:
+          - link "Visual resume":
+            - /url: https://resume.naukri.com/visual-resume-writing-services?fftid=101002
+        - listitem:
+          - link "Resume critique":
+            - /url: https://resume.naukri.com/resume-critique?fftid=101006
+        - listitem: Find Jobs
+        - listitem:
+          - link "Jobs4u":
+            - /url: https://resume.naukri.com/job-alerts-on-mobile-mail?fftid=101011#jobmail
+        - listitem:
+          - link "Priority applicant":
+            - /url: https://resume.naukri.com/priority-job-application?fftid=101019
+        - listitem:
+          - link "Contact us":
+            - /url: https://resume.naukri.com/contact-us?fftid=101015
+      - list:
+        - listitem: Get recruiter's attention
+        - listitem:
+          - link "Resume display":
+            - /url: https://resume.naukri.com/resume-display?fftid=101009
+        - listitem: Monthly subscriptions
+        - listitem:
+          - link "Basic & premium plans":
+            - /url: https://resume.naukri.com/subscription-product?fftid=101025
+      - list:
+        - listitem: Free resume resources
+        - listitem:
+          - link "Resume maker":
+            - /url: https://www.naukri.com/resume-maker?utmTerm=ResumePro_Gnb&utmContent=gnbServices
+        - listitem:
+          - link "Resume quality score":
+            - /url: https://resume.naukri.com/resume-quality-score?fftid=101003
+        - listitem:
+          - link "Resume samples":
+            - /url: https://resume.naukri.com/resume-samples?fftid=101004
+        - listitem:
+          - link "Job letter samples":
+            - /url: https://resume.naukri.com/job-letter-format
+- link "Login":
+  - /url: https://login.naukri.com/nLogin/Login.php
+- link "Register":
+  - /url: https://www.naukri.com/registration/createAccount?othersrcp=22636
+- text:  Login
+- link "Register for free":
+  - /url: /registration/createAccount?othersrcp=16201&err=1
+- text: Email ID / Username
+- textbox "Enter your active Email ID / Username": jagtapda1765@gmail.com
+- text: Password
+- textbox "Enter your password": Deepak@1994
+- text: Show
+- link "Forgot Password?":
+  - /url: /nlogin/forgotpassword
+- button "Login"
+- button "Use OTP to Login"
+- text: or
+- emphasis
+- text: Sign in with Google
+- listitem:
+  - text: For employers 
+  - list:
+    - listitem:
+      - link "Buy online":
+        - /url: https://www.naukri.com/recruit/buy-resume-database-access-packages
+    - listitem:
+      - link "Naukri Talent Cloud":
+        - /url: https://www.naukritalentcloud.com?utmSource=jobseekerGNB
+    - listitem:
+      - link "Post a job FREE":
+        - /url: https://hiring.naukri.com/hiring/job/b?from=naukri-homepage
+    - listitem:
+      - link "Employer Login":
+        - /url: https://www.naukri.com/recruit/login
+- heading "Find your dream job now" [level=1]
+- text: 5 lakh+ jobs for you to explore We use cookies to improve your experience. By continuing to browse the site, you agree to our
+- link "Privacy Policy":
+  - /url: /privacypolicy
+- text: "&"
+- link "Cookie Policy":
+  - /url: /privacypolicy#cookiePolicy
+- text: Got it
+- textbox "Enter skills / designations / companies"
+- textbox "Select experience"
+- text: ˅
+- textbox "Enter location"
+- text: Search
+- img "awareness"
+- link "Remote-img Remote arrow-icon":
+  - /url: https://www.naukri.com/remote-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Remote-img"
+  - text: Remote
+  - img "arrow-icon"
+- link "MNC-img MNC arrow-icon":
+  - /url: https://www.naukri.com/mnc-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "MNC-img"
+  - text: MNC
+  - img "arrow-icon"
+- link "Sales-img Sales arrow-icon":
+  - /url: https://www.naukri.com/sales-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Sales-img"
+  - text: Sales
+  - img "arrow-icon"
+- link "Supply Chain-img Supply Chain arrow-icon":
+  - /url: https://www.naukri.com/supply-chain-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Supply Chain-img"
+  - text: Supply Chain
+  - img "arrow-icon"
+- link "Fresher-img Fresher arrow-icon":
+  - /url: https://www.naukri.com/fresher-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Fresher-img"
+  - text: Fresher
+  - img "arrow-icon"
+- link "Analytics-img Analytics arrow-icon":
+  - /url: https://www.naukri.com/analytics-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Analytics-img"
+  - text: Analytics
+  - img "arrow-icon"
+- link "Fortune 500-img Fortune 500 arrow-icon":
+  - /url: https://www.naukri.com/jobs-in-india?qctopCompany=247&clusters=qctopCompany&src=discovery_trendingWdgt_homepage_srch
+  - img "Fortune 500-img"
+  - text: Fortune 500
+  - img "arrow-icon"
+- link "Banking & Finance-img Banking & Finance arrow-icon":
+  - /url: https://www.naukri.com/bfsi-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Banking & Finance-img"
+  - text: Banking & Finance
+  - img "arrow-icon"
+- link "Data Science-img Data Science arrow-icon":
+  - /url: https://www.naukri.com/data-science-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Data Science-img"
+  - text: Data Science
+  - img "arrow-icon"
+- link "Marketing-img Marketing arrow-icon":
+  - /url: https://www.naukri.com/marketing-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "Marketing-img"
+  - text: Marketing
+  - img "arrow-icon"
+- link "HR-img HR arrow-icon":
+  - /url: https://www.naukri.com/hr-jobs?src=discovery_trendingWdgt_homepage_srch
+  - img "HR-img"
+  - text: HR
+  - img "arrow-icon"
+- heading "Top companies hiring now" [level=2]
+- link "MNCs":
+  - /url: https://www.naukri.com/mnc-companies-in-india-cat101?title=MNCs+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 2.2K+ are actively hiring
+- link "Fintech":
+  - /url: https://www.naukri.com/fintech-and-payments-companies-in-india-cat108?title=Fintech+%26+Payments+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 129 are actively hiring
+- link "FMCG & Retail":
+  - /url: https://www.naukri.com/fmcg-and-retail-companies-in-india-cat113?title=FMCG+%26+Retail+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 164 are actively hiring
+- link "Startups":
+  - /url: https://www.naukri.com/startup-companies-in-india-cat103?title=Startups+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 685 are actively hiring
+- link "Edtech":
+  - /url: https://www.naukri.com/edtech-companies-in-india-cat107?title=Edtech+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 164 are actively hiring
+- link "Healthcare":
+  - /url: https://www.naukri.com/healthcare-and-lifesciences-companies-in-india-cat111?title=Healthcare+%26+Lifesciences+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 625 are actively hiring
+- link "Unicorns":
+  - /url: https://www.naukri.com/unicorn-companies-in-india-cat102?title=Unicorns+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 95 are actively hiring
+- link "B2C":
+  - /url: https://www.naukri.com/b2c-companies-in-india-cat104?title=B2C+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 2.4K+ are actively hiring
+- link "Internet":
+  - /url: https://www.naukri.com/internet-companies-in-india-cat105?title=Internet+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 253 are actively hiring
+- link "Manufacturing":
+  - /url: https://www.naukri.com/manufacturing-companies-in-india-cat112?title=Manufacturing+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 1K+ are actively hiring
+- link "Fortune 500":
+  - /url: https://www.naukri.com/fortune-500-companies-in-india-cat115?title=Fortune+500+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 124 are actively hiring
+- link "Product":
+  - /url: https://www.naukri.com/product-companies-in-india-cat106?title=Product+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 1.2K+ are actively hiring
+- link "Banking & Finance":
+  - /url: https://www.naukri.com/banking-and-finance-companies-in-india-cat110?title=Banking+%26+Financial+services+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 400 are actively hiring
+- link "Hospitality":
+  - /url: https://www.naukri.com/travel-and-hotel-companies-in-india-cat114?title=Travel+%26+Hotel+companies+actively+hiring&src=discovery_orgExploreCompanies_homepage_srch
+- img "arrow-icon"
+- text: 82 are actively hiring
+- button "Next slide"
+- heading "Featured companies actively hiring" [level=2]
+- img "Infosys BPM"
+- heading "Infosys BPM" [level=3]:
+  - link "Infosys BPM":
+    - /url: https://www.naukri.com/infosys-bpm-overview-191386?src=premiumLogo
+- img "rating"
+- text: 3.5 10.8K+ reviews
+- paragraph: Join us to navigate your next
+- link "View jobs":
+  - /url: https://www.naukri.com/infosys-bpm-overview-191386?tab=jobs&src=premiumLogo
+- img "Reliance Retail"
+- heading "Reliance Retail" [level=3]:
+  - link "Reliance Retail":
+    - /url: https://www.naukri.com/reliance-retail-overview-214440?src=premiumLogo
+- img "rating"
+- text: 3.9 24.5K+ reviews
+- paragraph: Building India's largest retail company
+- link "View jobs":
+  - /url: https://www.naukri.com/reliance-retail-overview-214440?tab=jobs&src=premiumLogo
+- img "ICICI Bank"
+- heading "ICICI Bank" [level=3]:
+  - link "ICICI Bank":
+    - /url: https://www.naukri.com/icici-bank-overview-44512?src=premiumLogo
+- img "rating"
+- text: 4.0 42.6K+ reviews
+- paragraph: Leading private sector bank in India.
+- link "View jobs":
+  - /url: https://www.naukri.com/icici-bank-overview-44512?tab=jobs&src=premiumLogo
+- img "Airtel"
+- heading "Airtel" [level=3]:
+  - link "Airtel":
+    - /url: https://www.naukri.com/airtel-overview-126896?src=premiumLogo
+- img "rating"
+- text: 3.9 15.3K+ reviews
+- paragraph: Leading global telecom company.
+- link "View jobs":
+  - /url: https://www.naukri.com/airtel-overview-126896?tab=jobs&src=premiumLogo
+- img "Tata Consultancy Services"
+- heading "Tata Consultancy Services" [level=3]:
+  - link "Tata Consultancy Services":
+    - /url: https://www.naukri.com/tata-consultancy-services-overview-223346?src=premiumLogo
+- img "rating"
+- text: 3.6 100.1K+ reviews
+- paragraph: Explore challenging and exciting opportunities at TCS
+- link "View jobs":
+  - /url: https://www.naukri.com/tata-consultancy-services-overview-223346?tab=jobs&src=premiumLogo
+- img "Empower"
+- heading "Empower" [level=3]:
+  - link "Empower":
+    - /url: https://www.naukri.com/empower-overview-4675515?src=premiumLogo
+- img "rating"
+- text: 3.9 296 reviews
+- paragraph: We’re a financial services company.
+- link "View jobs":
+  - /url: https://www.naukri.com/empower-overview-4675515?tab=jobs&src=premiumLogo
+- img "Persistent"
+- heading "Persistent" [level=3]:
+  - link "Persistent":
+    - /url: https://www.naukri.com/persistent-overview-3835862?src=premiumLogo
+- img "rating"
+- text: 3.6 4.5K+ reviews
+- paragraph: Trusted global solutions company.
+- link "View jobs":
+  - /url: https://www.naukri.com/persistent-overview-3835862?tab=jobs&src=premiumLogo
+- img "Siemens"
+- heading "Siemens" [level=3]:
+  - link "Siemens":
+    - /url: https://www.naukri.com/siemens-overview-40604?src=premiumLogo
+- img "rating"
+- text: 4.0 5.2K+ reviews
+- paragraph: "Create a better #TomorrowWithUs"
+- link "View jobs":
+  - /url: https://www.naukri.com/siemens-overview-40604?tab=jobs&src=premiumLogo
+- img "Apple"
+- heading "Apple" [level=3]:
+  - link "Apple":
+    - /url: https://www.naukri.com/apple-overview-445608?src=premiumLogo
+- img "rating"
+- text: 4.3 621 reviews
+- paragraph: Join us. Be you.
+- link "View jobs":
+  - /url: https://www.naukri.com/apple-overview-445608?tab=jobs&src=premiumLogo
+- img "Avalara Technologies"
+- heading "Avalara Technologies" [level=3]:
+  - link "Avalara Technologies":
+    - /url: https://www.naukri.com/avalara-technologies-overview-4581917?src=premiumLogo
+- img "rating"
+- text: 3.2 339 reviews
+- paragraph: We’re transforming tax through tech.
+- link "View jobs":
+  - /url: https://www.naukri.com/avalara-technologies-overview-4581917?tab=jobs&src=premiumLogo
+- img "Capgemini"
+- heading "Capgemini" [level=3]:
+  - link "Capgemini":
+    - /url: https://www.naukri.com/capgemini-overview-1288?src=premiumLogo
+- img "rating"
+- text: 3.7 46.9K+ reviews
+- paragraph: Global leader in technology services.
+- link "View jobs":
+  - /url: https://www.naukri.com/capgemini-overview-1288?tab=jobs&src=premiumLogo
+- img "Bread Financial"
+- heading "Bread Financial" [level=3]:
+  - link "Bread Financial":
+    - /url: https://www.naukri.com/bread-financial-overview-6254085?src=premiumLogo
+- img "rating"
+- text: 4.1 198 reviews
+- paragraph: Personalizing experiences with tech.
+- link "View jobs":
+  - /url: https://www.naukri.com/bread-financial-overview-6254085?tab=jobs&src=premiumLogo
+- button "Next slide"
+- link "View all companies":
+  - /url: https://www.naukri.com/allcompanies?searchType=premiumLogo&title=Featured+companies+actively+hiring&branding=%257B%2522pagename%2522%253A%2522ni-desktop-premium-viewAll%2522%257D&pageNo=1&qcount=47
+- img "nc-logo"
+- paragraph: Introducing a career platform for college students & fresh grads
+- paragraph: Explore contests, webinars, take aptitude test, prepare for your dream career & find jobs & internships
+- link "Expert speak arrow":
+  - /url: /campus/webinars
+  - text: Expert speak
+  - img "arrow"
+- link "Contests arrow":
+  - /url: /campus/contests
+  - text: Contests
+  - img "arrow"
+- link "NCAT arrow":
+  - /url: /campus/ncat-aptitude-test
+  - text: NCAT
+  - img "arrow"
+- link "Pathfinder arrow":
+  - /url: /campus/pathfinder
+  - text: Pathfinder
+  - img "arrow"
+- link "Jobs & Internships arrow":
+  - /url: /campus/find-work
+  - text: Jobs & Internships
+  - img "arrow"
+- link "Explore now":
+  - /url: https://www.naukri.com/campus
+- text: Just launched
+- img "naukri role-collection"
+- paragraph: Discover jobs across popular roles
+- paragraph: Select a role and we'll show you relevant jobs for it!
+- link "Full Stack Developer":
+  - /url: https://www.naukri.com/full-stack-developer-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 21.2K+ Jobs
+  - img "arrow-icon"
+- link "Mobile / App Developer":
+  - /url: https://www.naukri.com/mobile-application-development-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 3.2K+ Jobs
+  - img "arrow-icon"
+- link "Front End Developer":
+  - /url: https://www.naukri.com/front-end-developer-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 5.4K+ Jobs
+  - img "arrow-icon"
+- link "DevOps Engineer":
+  - /url: https://www.naukri.com/devops-engineer-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 3.2K+ Jobs
+  - img "arrow-icon"
+- link "Engineering Manager":
+  - /url: https://www.naukri.com/engineering-manager-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 1.6K+ Jobs
+  - img "arrow-icon"
+- link "Technical Lead":
+  - /url: https://www.naukri.com/technical-lead-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 11.7K+ Jobs
+  - img "arrow-icon"
+- link "Automation Test Engineer":
+  - /url: https://www.naukri.com/automation-test-engineer-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 3.2K+ Jobs
+  - img "arrow-icon"
+- link "Cyber Security":
+  - /url: https://www.naukri.com/cyber-security-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 954 Jobs
+  - img "arrow-icon"
+- link "Technical Architect":
+  - /url: https://www.naukri.com/technical-architect-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 5.7K+ Jobs
+  - img "arrow-icon"
+- link "Business Analyst":
+  - /url: https://www.naukri.com/business-analyst-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 5.6K+ Jobs
+  - img "arrow-icon"
+- link "Data Scientist":
+  - /url: https://www.naukri.com/data-scientist-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 1.5K+ Jobs
+  - img "arrow-icon"
+- link "Program Manager - Technology / IT":
+  - /url: https://www.naukri.com/technical-program-manager-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 662 Jobs
+  - img "arrow-icon"
+- link "Product Manager":
+  - /url: https://www.naukri.com/product-manager-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 1.2K+ Jobs
+  - img "arrow-icon"
+- link "UI / UX Designer":
+  - /url: https://www.naukri.com/ui-ux-designer-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 1.8K+ Jobs
+  - img "arrow-icon"
+- link "Research Analyst":
+  - /url: https://www.naukri.com/research-analyst-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 147 Jobs
+  - img "arrow-icon"
+- link "Branch Manager":
+  - /url: https://www.naukri.com/branch-manager-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 429 Jobs
+  - img "arrow-icon"
+- link "Functional Consultant":
+  - /url: https://www.naukri.com/functional-consultant-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 5.3K+ Jobs
+  - img "arrow-icon"
+- link "Chartered Accountant (CA)":
+  - /url: https://www.naukri.com/chartered-accountant-jobs?src=popular_roles_homepage_srch
+- paragraph:
+  - text: 1.1K+ Jobs
+  - img "arrow-icon"
+- button "Next slide"
+- heading "Sponsored companies" [level=2]
+- text: All IT Services Technology Healthcare & Life Sciences Infrastructure, Transport & Real Estate Manufacturing & Production BFSI Consumer, Retail & Hospitality BPM Professional Services Media, Entertainment & Telecom +4 more
+- img "NCSI Technologies"
+- heading "NCSI Technologies" [level=3]:
+  - link "NCSI Technologies":
+    - /url: https://www.naukri.com/ncsi-technologies-overview-4613175?src=standardLogo
+- text: B2B Private Foreign MNC IT Services & Consulting
+- img "Comcast"
+- heading "Comcast" [level=3]:
+  - link "Comcast":
+    - /url: https://www.naukri.com/comcast-overview-308888?src=standardLogo
+- img "rating"
+- text: 3.9 348 reviews B2B Private Foreign MNC Fortune Global 500 Film / Music / Entertainment
+- img "NICE"
+- heading "NICE" [level=3]:
+  - link "NICE":
+    - /url: https://www.naukri.com/nice-overview-4656921?src=standardLogo
+- img "rating"
+- text: 3.5 564 reviews B2B Public Foreign MNC Software Product Service
+- img "HSBC"
+- heading "HSBC" [level=3]:
+  - link "HSBC":
+    - /url: https://www.naukri.com/hsbc-overview-164080?src=standardLogo
+- img "rating"
+- text: 3.9 5.4K+ reviews Financial Services IT Services & Consulting Fortune India 500 Forbes Global 2000 Fortune Global 500
+- img "KPIT"
+- heading "KPIT" [level=3]:
+  - link "KPIT":
+    - /url: https://www.naukri.com/kpit-overview-949664?src=standardLogo
+- img "rating"
+- text: 3.2 3.1K+ reviews Software Product Indian MNC Public IT Services & Consulting Analytics / KPO / Research
+- img "Vantive Healthcare Technologies"
+- heading "Vantive Healthcare Technologies" [level=3]:
+  - link "Vantive Healthcare Technologies":
+    - /url: https://www.naukri.com/vantive-healthcare-technologies-overview-11574222?src=standardLogo
+- img "rating"
+- text: 4.7 24 reviews Medical Services / Hospital Startup
+- img "Piramal Pharma Limited"
+- heading "Piramal Pharma Limited" [level=3]:
+  - link "Piramal Pharma Limited":
+    - /url: https://www.naukri.com/piramal-pharma-limited-overview-4668113?src=standardLogo
+- img "rating"
+- text: 4.0 1.2K+ reviews B2B Public Foreign MNC Pharmaceutical & Life Sciences
+- img "Zepto"
+- heading "Zepto" [level=3]:
+  - link "Zepto":
+    - /url: https://www.naukri.com/zepto-overview-6757431?src=standardLogo
+- img "rating"
+- text: 3.5 1.8K+ reviews Internet
+- img "McAfee"
+- heading "McAfee" [level=3]:
+  - link "McAfee":
+    - /url: https://www.naukri.com/mcafee-overview-1361674?src=standardLogo
+- img "rating"
+- text: 3.8 273 reviews Software Product B2B B2C Foreign MNC TOP
+- img "Thomson Reuters"
+- heading "Thomson Reuters" [level=3]:
+  - link "Thomson Reuters":
+    - /url: https://www.naukri.com/thomson-reuters-overview-52806?src=standardLogo
+- img "rating"
+- text: 4.1 1.7K+ reviews Culture Financial Services Emerging Technologies Software Product
+- img "Sundaram Finance (SFL)"
+- heading "Sundaram Finance (SFL)" [level=3]:
+  - link "Sundaram Finance (SFL)":
+    - /url: https://www.naukri.com/sundaram-finance-sfl-overview-68950?src=standardLogo
+- img "rating"
+- text: 4.1 958 reviews Financial Services NBFC Fortune India 500 (2019) B2B Corporate
+- img "Kent PLC"
+- heading "Kent PLC" [level=3]:
+  - link "Kent PLC":
+    - /url: https://www.naukri.com/kent-plc-overview-7575585?src=standardLogo
+- img "rating"
+- text: 4.2 289 reviews Oil & Gas Foreign MNC B2B
+- img "G R Infraprojects"
+- heading "G R Infraprojects" [level=3]:
+  - link "G R Infraprojects":
+    - /url: https://www.naukri.com/g-r-infraprojects-overview-4596565?src=standardLogo
+- img "rating"
+- text: 4.1 1.7K+ reviews Engineering & Construction Corporate B2B Public Fortune India 500
+- img "Tietoevry"
+- heading "Tietoevry" [level=3]:
+  - link "Tietoevry":
+    - /url: https://www.naukri.com/tietoevry-overview-2078424?src=standardLogo
+- img "rating"
+- text: 4.2 1.3K+ reviews B2B IT Services & Consulting Software Product Highly Rated by Women Work-Life Balance
+- img "ORBIT & SKYLINE"
+- heading "ORBIT & SKYLINE" [level=3]:
+  - link "ORBIT & SKYLINE":
+    - /url: https://www.naukri.com/orbit-skyline-overview-8273973?src=standardLogo
+- img "rating"
+- text: 3.8 43 reviews Electronic Components / Semiconductors B2B
+- img "K Raheja Corp"
+- heading "K Raheja Corp" [level=3]:
+  - link "K Raheja Corp":
+    - /url: https://www.naukri.com/k-raheja-corp-overview-410908?src=standardLogo
+- img "rating"
+- text: 4.2 694 reviews Real Estate
+- img "MediaMint"
+- heading "MediaMint" [level=3]:
+  - link "MediaMint":
+    - /url: https://www.naukri.com/mediamint-overview-645478?src=standardLogo
+- img "rating"
+- text: 3.4 348 reviews Advertising & Marketing Private B2B Indian MNC
+- img "DTCC"
+- heading "DTCC" [level=3]:
+  - link "DTCC":
+    - /url: https://www.naukri.com/dtcc-overview-383748?src=standardLogo
+- img "rating"
+- text: 4.1 89 reviews Financial Services Corporate B2B FinTech / Payments
+- img "Xoriant"
+- heading "Xoriant" [level=3]:
+  - link "Xoriant":
+    - /url: https://www.naukri.com/xoriant-overview-2436002?src=standardLogo
+- img "rating"
+- text: 4.1 2.1K+ reviews Software Product Foreign MNC B2B Service IT Services & Consulting
+- img "Hexaware Technologies"
+- heading "Hexaware Technologies" [level=3]:
+  - link "Hexaware Technologies":
+    - /url: https://www.naukri.com/hexaware-technologies-overview-12466?src=standardLogo
+- img "rating"
+- text: 3.5 6.7K+ reviews B2B Corporate Fortune India 500 IT Services & Consulting Service
+- img "Cotiviti"
+- heading "Cotiviti" [level=3]:
+  - link "Cotiviti":
+    - /url: https://www.naukri.com/cotiviti-overview-4422258?src=standardLogo
+- img "rating"
+- text: 3.6 594 reviews IT Services & Consulting Private Analytics / KPO / Research Service B2B
+- img "SES Global Technology Services"
+- heading "SES Global Technology Services" [level=3]:
+  - link "SES Global Technology Services":
+    - /url: https://www.naukri.com/ses-global-technology-services-overview-9727299?src=standardLogo
+- img "rating"
+- text: 5.0 2 reviews Hardware & Networking Foreign MNC
+- img "Aptiv"
+- heading "Aptiv" [level=3]:
+  - link "Aptiv":
+    - /url: https://www.naukri.com/aptiv-overview-4657441?src=standardLogo
+- img "rating"
+- text: 3.5 977 reviews Hardware & Networking Engineering & Construction Software Product Private Auto Components
+- img "Freyr"
+- heading "Freyr" [level=3]:
+  - link "Freyr":
+    - /url: https://www.naukri.com/freyr-overview-4596341?src=standardLogo
+- img "rating"
+- text: 3.7 375 reviews Private B2B Service Legal Foreign MNC
+- button "Next slide"
+- link "View all companies":
+  - /url: https://www.naukri.com/allcompanies?searchType=standardLogo&title=Sponsored+companies&branding=%257B%2522pagename%2522%253A%2522ni-desktop-standard-viewAll%2522%257D&pageNo=1&qcount=47
+- heading "Upcoming events and challenges" [level=4]
+- img "swiper placeholder"
+- img "feature-card"
+- text: Entry closes in 8h
+- paragraph: Webinar
+- img "company logo"
+- paragraph: Must-have GenAI skills as developer to not get replaced
+- paragraph: Coding Ninjas
+- paragraph: Interview Preparation
+- paragraph: Career Guidance
+- img "User icon"
+- paragraph: 25 Jul, 7:00 PM
+- img "User icon"
+- paragraph: 478 Enrolled
+- img "feature-card-type-icon"
+- paragraph: Learn from experts
+- link "View details":
+  - /url: https://www.naukri.com/code360/events/must-have-genai-skills-as-developer-to-not-get-replaced-1?source=naukri&medium=desktop&campaign=masterclass
+- img "feature-card"
+- text: Entry closes in 1d
+- paragraph: Webinar
+- img "company logo"
+- paragraph: "Microsoft Data Analytics interview: Dos and Don’ts to get shortlisted"
+- paragraph: Coding Ninjas
+- paragraph: Interview Preparation
+- paragraph: Career Guidance
+- paragraph: Data Analytics
+- img "User icon"
+- paragraph: 26 Jul, 2:00 PM
+- img "User icon"
+- paragraph: 1.3K Enrolled
+- img "feature-card-type-icon"
+- paragraph: Learn from experts
+- link "View details":
+  - /url: https://www.naukri.com/code360/events/microsoft-data-analytics-interview-dos-and-don-ts-to-get-shortlisted-1?source=naukri&medium=desktop&campaign=masterclass
+- img "feature-card"
+- text: Entry closes in 3d
+- paragraph: Webinar
+- img "company logo"
+- paragraph: "Beyond ChatGPT: Build Skills for ₹30LPA+ GenAI Roles"
+- paragraph: Coding Ninjas
+- paragraph: Interview Preparation
+- paragraph: Career Guidance
+- img "User icon"
+- paragraph: 28 Jul, 7:00 PM
+- img "User icon"
+- paragraph: 247 Enrolled
+- img "feature-card-type-icon"
+- paragraph: Learn from experts
+- link "View details":
+  - /url: https://www.naukri.com/code360/events/beyond-chatgpt-build-skills-for-30lpa-genai-roles?source=naukri&medium=desktop&campaign=masterclass
+- img "feature-card"
+- text: Entry closes in 6d
+- paragraph: Webinar
+- img "company logo"
+- paragraph: "Amazon Data Analyst: Advanced Excel & AI Interview Tips"
+- paragraph: Coding Ninjas
+- paragraph: Interview Preparation
+- paragraph: Career Guidance
+- paragraph: Data Analytics
+- img "User icon"
+- paragraph: 31 Jul, 7:00 PM
+- img "User icon"
+- paragraph: 253 Enrolled
+- img "feature-card-type-icon"
+- paragraph: Learn from experts
+- link "View details":
+  - /url: https://www.naukri.com/code360/events/amazon-data-analyst-advanced-excel-ai-interview-tips-5?source=naukri&medium=desktop&campaign=masterclass
+- img "feature-card"
+- text: Entry closes in 4d
+- paragraph: Webinar
+- img "company logo"
+- paragraph: Amazon Data Analyst Roadmap – From Resume to Interview
+- paragraph: Coding Ninjas
+- paragraph: Interview Preparation
+- paragraph: Career Guidance
+- paragraph: Data Analytics
+- img "User icon"
+- paragraph: 29 Jul, 7:00 PM
+- img "User icon"
+- paragraph: 1.9K Enrolled
+- img "feature-card-type-icon"
+- paragraph: Learn from experts
+- link "View details":
+  - /url: https://www.naukri.com/code360/events/amazon-data-analyst-roadmap-from-resume-to-interview-1?source=naukri&medium=desktop&campaign=masterclass
+- img "feature-card"
+- text: Entry closes in 5d
+- paragraph: Webinar
+- img "company logo"
+- paragraph: Build ChatGPT-like Search Using RAG - Live with Google SDE3
+- paragraph: Coding Ninjas
+- paragraph: Interview Preparation
+- paragraph: Career Guidance
+- img "User icon"
+- paragraph: 30 Jul, 7:00 PM
+- img "User icon"
+- paragraph: 410 Enrolled
+- img "feature-card-type-icon"
+- paragraph: Learn from experts
+- link "View details":
+  - /url: https://www.naukri.com/code360/events/build-chatgpt-like-search-using-rag-live-with-google-sde3-1?source=naukri&medium=desktop&campaign=masterclass
+- button "Next slide"
+- text: by AmbitionBox
+- img "naukri ab interview"
+- heading "Prepare for your next interview" [level=3]
+- paragraph: Interview questions by company
+- img "naulogo"
+- link "TCS":
+  - /url: https://www.ambitionbox.com/interviews/tcs-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: 2.5K+ Interviews
+- img "arrow-icon"
+- img "naulogo"
+- link "Accenture":
+  - /url: https://www.ambitionbox.com/interviews/accenture-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: 2K+ Interviews
+- img "arrow-icon"
+- img "naulogo"
+- link "Flipkart":
+  - /url: https://www.ambitionbox.com/interviews/flipkart-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: 488 Interviews
+- img "arrow-icon"
+- img "naulogo"
+- link "Amazon":
+  - /url: https://www.ambitionbox.com/interviews/amazon-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: 1.7K+ Interviews
+- img "arrow-icon"
+- img "naulogo"
+- link "Cognizant":
+  - /url: https://www.ambitionbox.com/interviews/cognizant-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: 1.6K+ Interviews
+- img "arrow-icon"
+- img "naulogo"
+- link "Byjus":
+  - /url: https://www.ambitionbox.com/interviews/byjus-interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: 816 Interviews
+- img "arrow-icon"
+- link "View all companies":
+  - /url: https://www.ambitionbox.com/interviews?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- img "arrow-icon"
+- paragraph: Interview questions by role
+- link "Software Engineer":
+  - /url: https://www.ambitionbox.com/profiles/software-engineer/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: (7.2K+ questions)
+- separator
+- link "Business Analyst":
+  - /url: https://www.ambitionbox.com/profiles/business-analyst/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: (2.8K+ questions)
+- separator
+- link "Consultant":
+  - /url: https://www.ambitionbox.com/profiles/consultant/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: (2.4K+ questions)
+- separator
+- link "Financial Analyst":
+  - /url: https://www.ambitionbox.com/profiles/financial-analyst/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: (894 questions)
+- separator
+- link "Sales & Marketing":
+  - /url: https://www.ambitionbox.com/profiles/sales-and-marketing/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: (991 questions)
+- separator
+- link "Quality Engineer":
+  - /url: https://www.ambitionbox.com/profiles/quality-engineer/interview-questions?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- paragraph: (1.3K+ questions)
+- link "View all roles":
+  - /url: https://www.ambitionbox.com/interviews/profiles?utm_source=naukri&utm_medium=desktop&utm_campaign=nonlogged_homepage
+- img "arrow-icon"
+- img "Fast forward naukri services"
+- heading "Accelerate your job search with premium services" [level=3]
+- paragraph: "Services to help you get hired, faster: from preparing your CV, getting recruiter attention, finding the right jobs, and more!"
+- link "button-icon Resume writing arrow-icon":
+  - /url: https://resume.naukri.com/mid-level-experienced-professionals-resume-writing?fftid=LoggedOutHomePage
+  - img "button-icon"
+  - text: Resume writing
+  - img "arrow-icon"
+- link "button-icon Priority applicant arrow-icon":
+  - /url: https://resume.naukri.com/priority-job-application?fftid=LoggedoutHomePage
+  - img "button-icon"
+  - text: Priority applicant
+  - img "arrow-icon"
+- link "button-icon Resume display arrow-icon":
+  - /url: https://resume.naukri.com/resume-display?fftid=LoggedOutHomePage
+  - img "button-icon"
+  - text: Resume display
+  - img "arrow-icon"
+- text: by Naukri Fastforward
+- link "Learn more":
+  - /url: https://resume.naukri.com/?fftid=LoggedOutHomePage
+- paragraph: Includes paid services
+- heading "Stand out among recruiters with a video profile" [level=3]
+- paragraph: Available for both Android and iOS apps
+- textbox "Enter mobile number..."
+- button "Get link"
+- link "Google Play":
+  - /url: https://play.google.com/store/apps/details?id=naukriApp.appModules.login&hl=en_IN&utm_source=desktop_homepage&utm_campaign=widget
+  - img "Google Play"
+- link "App Store":
+  - /url: https://apps.apple.com/in/app/naukri-com-job-search/id482877505?utm_source=desktop_homepage&utm_campaign=widget
+  - img "App Store"
+- img
+- paragraph: Scan to download
+- img
+- contentinfo:
+  - link "Naukri Logo":
+    - /url: https://www.naukri.com
+    - img "Naukri Logo"
+  - text: Connect with us
+  - link "naukri social icons":
+    - /url: https://www.facebook.com/Naukri
+    - img "naukri social icons"
+  - link "naukri social icons":
+    - /url: https://instagram.com/naukridotcom/
+    - img "naukri social icons"
+  - link "naukri social icons":
+    - /url: https://twitter.com/naukri
+    - img "naukri social icons"
+  - link "naukri social icons":
+    - /url: http://www.linkedin.com/company/naukri.com
+    - img "naukri social icons"
+  - list:
+    - listitem:
+      - link "About us":
+        - /url: http://infoedge.in
+    - listitem:
+      - link "Careers":
+        - /url: https://careers.infoedge.com/
+    - listitem:
+      - link "Employer home":
+        - /url: https://www.naukri.com/recruit/login
+    - listitem:
+      - link "Sitemap":
+        - /url: https://www.naukri.com/sitemap/sitemap.php
+    - listitem:
+      - link "Credits":
+        - /url: https://www.naukri.com/credits
+  - list:
+    - listitem:
+      - link "Help center":
+        - /url: https://www.naukri.com/faq/job-seeker?utm_source=footer
+    - listitem:
+      - link "Summons/Notices":
+        - /url: https://w5.naukri.com/summons-notices-form/
+    - listitem:
+      - link "Grievances":
+        - /url: https://w5.naukri.com/grievances-form/
+    - listitem:
+      - link "Report issue":
+        - /url: https://w5.naukri.com/fdbck/main/feedback.php?app_id=15
+  - list:
+    - listitem:
+      - link "Privacy policy":
+        - /url: https://www.naukri.com/privacypolicy
+    - listitem:
+      - link "Terms & conditions":
+        - /url: https://www.naukri.com/termsconditions
+    - listitem:
+      - link "Fraud alert":
+        - /url: https://www.naukri.com/imposter/report-fake-job-recruiter
+    - listitem:
+      - link "Trust & safety":
+        - /url: https://www.naukri.com/jobsearch/trust-safety
+  - text: Apply on the go Get real-time job updates on our App
+  - link "naukri app download":
+    - /url: https://play.google.com/store/apps/details?id=naukriApp.appModules.login&hl=en&utm_source=naukri&utm_medium=footer
+    - img "naukri app download"
+  - link "naukri app download":
+    - /url: https://itunes.apple.com/in/app/naukri.com-job-search/id482877505?mt=8
+    - img "naukri app download"
+  - link "naukri social logos":
+    - /url: http://infoedge.in
+    - img "naukri social logos"
+  - text: All trademarks are the property of their respective owners All rights reserved © 2025 Info Edge (India) Ltd. Our businesses
+  - list:
+    - listitem:
+      - link "nnacres":
+        - /url: https://www.99acres.com/
+        - img "nnacres"
+    - listitem:
+      - link "jeevansathi":
+        - /url: https://www.jeevansathi.com/
+        - img "jeevansathi"
+    - listitem:
+      - link "ng":
+        - /url: https://www.naukrigulf.com/
+        - img "ng"
+    - listitem:
+      - link "shiksha":
+        - /url: https://www.shiksha.com/
+        - img "shiksha"
+    - listitem:
+      - link "iimjobs":
+        - /url: https://www.iimjobs.com
+        - img "iimjobs"
+    - listitem:
+      - link "hirist":
+        - /url: https://www.hirist.tech/
+        - img "hirist"
+    - listitem:
+      - link "jobhai":
+        - /url: https://www.jobhai.com
+        - img "jobhai"
+    - listitem:
+      - link "doselect":
+        - /url: https://doselect.com/
+        - img "doselect"
+    - listitem:
+      - link "minis":
+        - /url: https://www.naukri.com/minis
+        - img "minis"
+    - listitem:
+      - link "codingninjas":
+        - /url: https://www.codingninjas.com/?utm_source=naukri&utm_medium=desktop-footer
+        - img "codingninjas"
+```
+
+# Test source
+
+```ts
+   1 | const { test, expect } = require('@playwright/test');
+   2 | const credSet = JSON.parse(JSON.stringify(require("./creds.json")));
+   3 |
+   4 | for(const cred of credSet)
+   5 | {
+   6 |   test(`update resume on naukari fro account ${cred.accName}`, async ({ page }) => 
+   7 |   {
+   8 |
+   9 |     await page.goto("https://www.naukri.com/");
+  10 |     await page.waitForLoadState('networkidle');
+  11 |
+  12 |     //login
+  13 |     await page.locator("#login_Layer").click();
+  14 |     await page.locator("[name=login-form]>div:nth-child(2)>input").fill(cred.username);
+  15 |     await page.locator("[name=login-form]>div:nth-child(3)>input").fill(cred.password);
+> 16 |     await page.locator("[type=submit]").click();
+     |                                         ^ Error: locator.click: Error: strict mode violation: locator('[type=submit]') resolved to 2 elements:
+  17 |     await page.waitForLoadState('networkidle');
+  18 |     
+  19 |     // navigate to profile
+  20 |
+  21 |   });
+  22 |
+  23 | }
+```
