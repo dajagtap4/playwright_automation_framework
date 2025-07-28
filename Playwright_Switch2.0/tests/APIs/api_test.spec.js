@@ -7,8 +7,6 @@ const { test, expect } = require('@playwright/test');
 
 test("API GET Request",async({request})=>{
 
-
-    
     const responseGet = await request.get('https://reqres.in/api/users/2');
 
     expect(responseGet.status()).toBe(200);
