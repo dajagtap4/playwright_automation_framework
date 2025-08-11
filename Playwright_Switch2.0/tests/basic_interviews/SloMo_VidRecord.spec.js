@@ -3,6 +3,7 @@ import { dir } from 'console';
 
 test('slomo', async ({  }) => {
 
+   // from playwright.config.js file also we can set slowMo.
    const browser = await chromium.launch({
     slowMo: 500,
     headless: false
