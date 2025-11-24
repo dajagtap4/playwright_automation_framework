@@ -9,14 +9,15 @@ const ExcelJs = require('exceljs');
 
 async function readExcelFileDemo(){
     
-    // ExcelJs → It is library which helps to work with Excel files (.xlsx).
+    // ExcelJs → library which helps to work with Excel files (.xlsx).
     // Workbook → whole Excel file (it can have many sheets inside).
-    // new ExcelJs.Workbook() → creates new empty Excel file in memory.
+    // new ExcelJs.Workbook() → creates new empty Excel file.
     
     const workbook = new ExcelJs.Workbook();
 
     //workbook.xlsx.readFile(...) → This tells ExcelJs to open an existing Excel file.
-    
+    //this is HP pavilion laptop path =  C:/Users/Deepak/Downloads/excelDownloadTest.xlsx
+
     await workbook.xlsx.readFile('C:/Users/Deepak/Downloads/excelDownloadTest.xlsx');
     const worksheet = workbook.getWorksheet('Sheet2');
 
