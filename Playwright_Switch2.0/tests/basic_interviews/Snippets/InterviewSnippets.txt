@@ -1,0 +1,32 @@
+//Reverse String
+
+        String name = "Deepak";
+        String reverseName = "";
+         
+        for(int i=name.length()-1;i>=0;i--)
+        {
+          reverseName += name.charAt(i); 
+        }
+        System.out.println(reverseName); 
+
+==============================================================================
+
+//Palindrome?
+
+        String name = "madam";
+        String reverseName = "";
+         
+        for(int i=name.length()-1;i>=0;i--)
+        {
+          reverseName += name.charAt(i); 
+        }
+        if(name.equals(reverseName))
+        {
+           System.out.println("Palindrome"); 
+        }
+        else
+        {
+            System.out.println("non-Palindrome"); 
+        }
+   
+============================================================================== 
