@@ -16,7 +16,7 @@ test.describe.parallel('@web basecopy5 full suite', () => {
 
 // credentials.forEach(({ email, password }) => {
 
- test(`@web Test 01 - basecopy5 [${email}]`, async ({ page }) => {
+ test(`@st Test 01 - basecopy5 [${email}]`, async ({ page }) => {
 
     const poManager = new POManager2(page);
 
@@ -40,7 +40,7 @@ test.describe.parallel('@web basecopy5 full suite', () => {
 
  });
 
- test(`@web Test 02 - basecopy5 [${email}]`, async ({ page }) => {
+ test(`@st Test 02 - basecopy5 [${email}]`, async ({ page }) => {
 
     const poManager = new POManager2(page);
 
