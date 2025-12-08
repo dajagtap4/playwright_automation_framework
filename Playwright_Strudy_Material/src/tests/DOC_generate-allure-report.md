@@ -41,11 +41,11 @@ reporter: [['html'],
             ['allure-playwright',{outputFolder:'allure-results'}]
           ],
 
-### 4. Run any test
+### 4. Run any test or multiple tests.
 
-npx playwright test -g "has title"  
+npx playwright test -g "write-test-name" --reporter=allure-playwright
 
-in project structure 'allure-results' folder created 
+in project structure 'allure-results' folder created after excecution completed.
 
 ### 5. generate allure report
 
