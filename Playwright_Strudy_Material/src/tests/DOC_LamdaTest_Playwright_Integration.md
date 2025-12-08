@@ -1,97 +1,98 @@
 # LamdaTest Playwright Integration
 
-> Cretate playwright project,
+> npm install dotenv
 
-create .ts file (playwright-single.ts)
+Considering you have playwright setup with (npm init playwright@latest)
+
+### create env folder on global location create .env in that folder.
+
+`.env`
+```
+LT_USERNAME=deepakgithub4
+LT_ACCESS_KEY=LT_TrkreevdHzFFiRm7Pn5ZotwGyofYYdCXrm3wQn4NQg4GtNo
+BASE_URL=https://playwright.dev/
+```
 ---
-update package.json file as follow
-```
-"dependencies": {
-    "dotenv": "^16.4.5"
-  }
-```
----
-`laywright-single.ts`
-```
-import { chromium,expect } from "@playwright/test";
-const cp = require('child_process');
+update playwrightConfig.js file as follow
+Refer 
+> // for lambda test ===========================
 
-const playwrightClientVersion = cp.execSync('npx playwright --version').toString().trim().split(' ')[1];
+in below file
+> //===========================================
 
-(async () => {
-    const capabilities = {
-      'browserName': 'Chrome', // Browsers allowed: `Chrome`, `MicrosoftEdge`, `pw-chromium`, `pw-firefox` and `pw-webkit`
-      'browserVersion': 'latest',
-      'LT:Options': {
-        'platform': 'Windows 10',
-        'build': 'Playwright Single Build2',
-        'name': 'Playwright Sample Test4',
-        'user': 'jagtapda1765',
-        'accessKey': 'Oaqubs4rYvOuUeWkNkQdTyGEpCTs4qZcQ4Z3IY6PyoHv4fXc6I',
-        'network': true,
-        'video': true,
-        'console': true,
-        'tunnel': false, // Add tunnel configuration if testing locally hosted webpage
-        'tunnelName': '', // Optional
-        'geoLocation': '', // country code can be fetched from https://www.lambdatest.com/capabilities-generator/
-        'playwrightClientVersion': playwrightClientVersion
-      }
-    }
-  
-    const browser = await chromium.connect({
-      wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`
-    })
-  
-    const page = await browser.newPage()
-  
-    await page.goto("https://duckduckgo.com");
-  
-    let element = await page.locator("[name=\"q\"]");
-    await element.click();
-    await element.type("LambdaTest");
-    await element.press("Enter");
-    const title = await page.title()
-  
-    try {
-      expect(title).toEqual('LambdaTest at DuckDuckGo')
-      // Mark the test as completed or failed
-      await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'passed', remark: 'Title matched' } })}`)
-      await teardown(page, browser)
-    } catch (e) {
-      await page.evaluate(_ => {}, `lambdatest_action: ${JSON.stringify({ action: 'setTestStatus', arguments: { status: 'failed', remark: e.stack } })}`)
-      await teardown(page, browser)
-      throw e
-    }
-  
-  })()
-  
-  async function teardown(page, browser) {
-    await page.close();
-    await browser.close();
-  }
 ```
 
+import { defineConfig, devices } from '@playwright/test';
 
-`npm install -g ts-node`
+// for lambda test ===========================
+import dotenv from 'dotenv';
 
-Install TypeScript globally (if you haven't yet):
+dotenv.config({ path: './env/.env' });
+//===========================================
+export default defineConfig({
+  testDir: './tests',
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+  reporter: 'html',
+  use: {
+     trace: 'on-first-retry',
+  },
 
-`npm install -g typescript`
+  /* Configure projects for major browsers */
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
 
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+   // for lambda test =========================== 
+{
+  name: 'chromium-lambdatest',
+  use: {
+    connectOptions: {
+      wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(
+        JSON.stringify({
+          browserName: 'Chrome',
+          browserVersion: 'latest',
+          platform: 'Windows 11',
+          'LT:Options': {
+            user: process.env.LT_USERNAME,
+            accessKey: process.env.LT_ACCESS_KEY,
+            build: 'Deepak New Build',
+            name: 'Sample LambdaTest Test',
+            video: true,
+            console: true,
+            network: true,
+          },
+        })
+      )}`,
+    },
+  },
+}
+//===========================================
+    
+  ],
+
+});
+
+
+```
 ---
-Compile your TypeScript file to JavaScript:
 
-Run the TypeScript compiler (tsc) to convert your .ts file into a .js file.
+now run test in lambdatest.
+>npx playwright test --project=chromium-lambdatest -g "testname or groupname" 
 
-`tsc tests/playwright-single.ts`
+like below
 
-for above command give proper path else it will give error
-
-This will generate a playwright-single.js file.
-
----
-Run the compiled JavaScript file:
-
-Now, you can run the compiled JavaScript file using Node.js:
-
-`node playwright-single.js`
+> npx playwright test --project=chromium-lambdatest -g "@smoke"
