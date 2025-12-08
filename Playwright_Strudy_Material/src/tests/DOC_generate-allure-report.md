@@ -38,7 +38,7 @@ add below line in reposrter
 
 
 reporter: [['html'],
-            ['allure-playwright',{outputFolder:'my-allure-results'}]
+            ['allure-playwright',{outputFolder:'allure-results'}]
           ],
 
 ### 4. Run any test
@@ -49,15 +49,12 @@ in project structure 'allure-results' folder created
 
 ### 5. generate allure report
 
-allure generate my-allure-results -o allure-report --clean
+allure generate allure-results -o allure-report --clean
 
 above command generate allure report
 
 ### 6. Open allure report
 
 allure open allure-report
-
-Starting web server...
-2024-12-21 11:08:35.540:INFO::main: Logging initialized @527ms to org.eclipse.jetty.util.log.StdErrLog
 
 DONE---
