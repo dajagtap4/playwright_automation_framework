@@ -88,7 +88,7 @@ test('practice', async ({ page }) => {
   console.log('User successfully ordered item and verified it in order page .....');
  });  
 
-test('@Webst Client App login 34', async ({ page }) => {
+test('Client App login 34', async ({ page }) => {
 
    const email = "anshika@gmail.com";
    const productName = 'ZARA COAT 3';
