@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 
-const env = process.env.ENV || 'LambdaT'; // Set the environment variable for the config file
+const env = process.env.ENV || 'swaglabs'; // Set the environment variable for the config file
 process.env.ENV = env;
 
 dotenv.config({
@@ -17,8 +17,8 @@ export default defineConfig({
 
   testDir: './tests',
   timeout: 30000,
-  reporter: [['line'],['html'],['allure-playwright']],
-  //reporter:'html',
+  //reporter: [['line'],['html'],['allure-playwright']],
+  reporter:'line',
   workers: 4, // Adjust the number of workers based on your system capabilities
   fullyParallel: true,
   expect: {
@@ -39,7 +39,7 @@ export default defineConfig({
     },
 
 //============================================
-// lambdaTest setup
+// lambdaTest setup, Run = npx playwright test -g "@smoke" --project=chromium-lambdatest 
 //============================================
 //     {
 //       name: "Lambda Chrome",   // Project name (you can name it anything)
