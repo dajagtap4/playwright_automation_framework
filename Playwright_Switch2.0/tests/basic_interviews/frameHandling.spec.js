@@ -11,6 +11,7 @@ test("Frame Handling 1",async({page})=>
     console.log(textCheck.split(" ")[0]);
     console.log(textCheck.split(" ")[1]);
     console.log(textCheck.split(" ")[2]);
+    console.log(textCheck.split(" ")[3]);
 })
 
 test('Frame Handling 2',async ({page}) => {

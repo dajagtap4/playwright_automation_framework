@@ -9,7 +9,11 @@ exports.test = base.extend({
     await loginPage.goTo();
     // You can replace these credentials with env variables or test data as needed
     // await loginPage.validLogin(process.env.USERNAME, process.env.PASSWORD);
-    await loginPage.validLogin('standard_user', 'secret_sauce');
+    //await loginPage.validLogin('standard_user', 'secret_sauce');
+     await loginPage.validLogin(
+      process.env.USERNAME,
+      process.env.PASSWORD
+    );
     await use(loginPage);
   },
 

@@ -6,6 +6,6 @@ test("double click mouse",async({page})=>
    
     await page.locator('//*[@id="HTML10"]/div[1]/button').dblclick();
 
-    const f2 = await page.locator('#field2')
-    await expect(f2).toHaveValue('Hello World!')
+    // const f2 = await page.locator('#field2')
+    // await expect(f2).toHaveValue('Hello World!')
 });

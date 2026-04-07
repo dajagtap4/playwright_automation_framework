@@ -1,4 +1,5 @@
 //Palindrome?
+// 07/04/2026 | 
 
         String name = "madam";
         String reverseName = "";
@@ -15,73 +16,21 @@
         
    
 ============================================================================== 
-
+// 07/04/2026 | 
 Print all positive 
 
     int arr[] = {-10,-20,-30,0,10,20,30};
     
     for(int i=0;i<arr.length;i++)
         if(arr[i]<0)  
-        arr[i] = -arr[i];
+        arr[i] = - (arr[i]); //  - ( -10 ) = 10
         
     for(int k=0;k<arr.length;k++)
          System.out.print(arr[k]+" ");
 
-==============================================================================
-
-//*Print most repitative character name and count.
-
-  String name = "deepak test automation";
-        name = name.replace(" ", ""); // remove spaces
-
-        int maxCount = 0;
-        char maxChar = ' ';
-
-        for (int i = 0; i < name.length(); i++) {
-            int count = 1;
-
-            for (int j = i + 1; j < name.length(); j++) {
-                if (name.charAt(i) == name.charAt(j)) {
-                    count++;
-                }
-            }
-            if (count > maxCount) {
-                maxCount = count;
-                maxChar = name.charAt(i);
-            }
-        }
-        System.out.println("Most repeating character: " + maxChar);
-        System.out.println("Repeating count: " + maxCount);
-
-            ||::  ========= WITH MAP ========  ::||
-
-        String name = "deepak test automation";
-        name = name.replace(" ", "");  // remove spaces
-
-        Map<Character, Integer> map = new LinkedHashMap<>();
-
-        // Count frequency
-        for (int i = 0; i < name.length(); i++) {
-            char c = name.charAt(i);
-            map.put(c, map.get(c, 0) + 1);
-        }
-
-        // Find most repeating character
-        char maxChar = ' ';
-        int maxCount = 0;
-
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            if (entry.getValue() > maxCount) {
-                maxCount = entry.getValue();
-                maxChar = entry.getKey();
-            }
-        }
-
-        System.out.println("Most repeating character: " + maxChar);
-        System.out.println("Repeating count: " + maxCount);
-
 ============================================================================== 
-//*Print 2nd most repitative character name and count.
+
+//*Print 1st and 2nd repitative char with count.
 
         String name = "im deepak QA engineer";
         name = name.replaceAll("\\s+","");
@@ -113,7 +62,9 @@ Print all positive
             }
         }
         System.out.println("Second most repeating character: " + smaxChar + " = " + smaxCount);
+        System.out.println("Most repeating character: " + maxChar + " = " + maxCount);
 ==============================================================================
+07/04/2026 | 
 //*Print Missing Number 
 
         int arr[] = {12, 14, 18};
@@ -136,7 +87,7 @@ Print all positive
         System.out.println(missingNu);
 
 ==============================================================================
-
+07/04/2026 | 
 // frequency of characters in a string "aabdddess"
 Output = {a=2, b=1, d=3, e=1, s=2}
 
@@ -163,6 +114,89 @@ import java.util.Map;
            }
 
 ==============================================================================
+06/04/2026 /
+//frequency of only word Big and black
+
+        String str = "Big black bug bit a big black dog on his big black nose";
+
+        String[] words = str.toLowerCase().split("\\s+");
+        Map<String, Integer> map = new LinkedHashMap<>();
+
+        for (String c : words) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        for(Map.Entry<Character, Integer> entry : map.entrySet())
+        {
+             if (entry.getKey().equals("big") || entry.getKey().equals("black")) 
+             {
+                System.out.println(entry.getKey() + " " + entry.getValue());
+             }
+        }
+
+==============================================================================
+//How many times word appears in a sentence.
+06/04/2026 /
+        import java.util.*; 
+
+        String line = "Big black bug bit a big black dog on his big black nose";
+        String[] words = line.toLowerCase().split("\\s+");
+
+        Map<String,Integer> map = new LinkedHashMap<>();
+
+        for (String c : words) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        for (Map.Entry<String,Integer> entry : map.entrySet()) 
+        {
+            System.out.println(entry.getKey()+" "+ entry.getValue());
+        }
+
+==============================================================================
+06/04/2026 /
+// AnagramUsingMap
+
+            String str1 = "listen";
+		 	String str2 = "silent";
+
+	        Map<Character, Integer> map = new HashMap<>();
+
+	        // If lengths are different, not anagrams
+	        if (str1.length() != str2.length()) {
+	            System.out.println("Not anagrams");
+	            return;
+	        }
+
+	        // add str1 char in map one by one.
+	        for (int i = 0; i < str1.length(); i++) {
+	            char c = str1.charAt(i);
+	            map.put(c, map.getOrDefault(c, 0) + 1);
+	        }
+
+	        // Reduce count using second string
+	        for (int i = 0; i < str2.length(); i++) {
+	            char c = str2.charAt(i);
+
+	            if (!map.containsKey(c)) {
+	                System.out.println("Not anagrams");
+	                return;
+	            }
+                else
+	            map.put(c, map.get(c) - 1);
+
+	        if (map.get(c) == 0) 
+	            map.remove(c);
+	           
+	        }
+
+	        if (map.isEmpty())  
+	            System.out.println("Strings are anagrams");
+	        else 
+	            System.out.println("Not anagrams");
+	       
+==============================================================================
+* 02/04/2026 | 04/04/2026 |    
 Duplicates in string
 
         String str = "deepak   ashokrao jagtap";
@@ -187,6 +221,7 @@ Duplicates in string
            }
 
  ==============================================================================          
+01/04/2026 | 04/04/2026 |
 Print longest and 2nd longest word from String.
 
         String name = "my name is deepak";
@@ -206,61 +241,105 @@ Print longest and 2nd longest word from String.
         System.out.println(secondLongest);
 
 ==============================================================================    
-
+31/03/2026 | 04/04/2026 |
 *
 **
 ***
-****
-*****
 
-    for (int row = 1; row <= 5; row++) 
+        for (int i=0; i<3; i++) 
 		{
-			for (int column = 1; column <= row; column++) 
+			for (int j=0; j<=i; j++) 
+			{
+				System.out.print("*");  *,  **,  ***
+                System.out.print((char)('A'+j));  A,  AB,  ABC
+			}
+			System.out.println();
+		}
+==============================================================================
+        for (int j=0; j<=i; j++)
+        for (int j=i; j<5;  j++){      
+==============================================================================
+31/03/2026 | 04/04/2026 |
+
+***
+**
+*
+
+        for (int i=0; i<5; i++) 
+		{
+			for(int j=i; j<5; j++){
 			{
 				System.out.print("*");
 			}
 			System.out.println();
 		}
-==============================================================================
-        for (int row = 1; row <= 5; row++) 
-        for (int row = 5; row >= 1; row--)       
-==============================================================================
-
-*****
-****
-***
-**
-*
-
-        for (int row = 5; row >= 1; row--) 
-		{
-			for (int column = 1; column <= row; column++) 
-			{
-				System.out.print("*");
-			}
-			System.out.println();
-		}
 
 ==============================================================================
+* 30/03/2026 | 04/04/2026 |
 //Print arry in ascending and descending
 
         int arr[] = {8,4,5,9,7,0,1};
-        
-        for(int i=1;i<=arr.length-1;i++)
+
+        for(int i=0;i<arr.length;i++)
         {
-            for(int j=1;j<=arr.length-1;j++)
+            for(int j=i+1;j<arr.length;j++)
             {
-                if(arr[i]<arr[j])  //0 1 4 5 7 9
-                if(arr[i]>arr[j])  //9 7 5 4 1 0
-                { 
+                if(arr[i]>arr[j]){   // o to 9
+              //if(arr[i]<arr[j]){   // 9 to 0
                     int temp = arr[i];
                     arr[i]=arr[j];
                     arr[j]=temp;
                 }
             }
         }
-        for(int k=1;k<=arr.length-1;k++)
+         for(int k=0;k<arr.length;k++)
         {
-            System.out.println(arr[k]);
+            System.out.print(arr[k] + " ");
         }
+==============================================================================
+28/03/2026 | 04/04/2026 |
+Min Max array
+//Asked in R system interview.
+
+	int a[] = { 8, 4, 5, 0, 9, 7, 5, 5, 0, 1 };
+
+		int min = a[0];
+//      int Max = a[0]; // to find max nu.
+
+        // why not int i = 0; in below for ()?
+        // because a[0] is already stored in min
+
+		for (int i = 1; i < a.length; i++) { 
+
+//		    if (a[i] > max) to find Max nu.
+			if (a[i] < min) 
+			{
+				min = a[i];
+			}
+		}
+		System.out.println(min);
+//      System.out.println(max);  //  to find max nu.
+==============================================================================
+27/03/2026 | 04/04/2026 |
+String - Remove Duplicates
+
+        String name = "aabdddess";   
+        Set<Character> set = new LinkedHashSet<Character>();
+        
+        for(int i=0;i<name.length();i++)
+        {
+            char c = name.charAt(i);
+            set.add(c);     
+        }
+        System.out.println(set);
+
+Array = Remove duplicates
+//Asked in R system interview.
+
+        int arr[] = {8,4,5,0,9,7,5,5,0,1};
+        Set<Integer> set = new LinkedHashSet<Integer>();
+        for(int i=0;i<arr.length;i++)
+            set.add(arr[i]);     
+        System.out.println(set);
+
 ==============================================================================

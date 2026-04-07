@@ -13,4 +13,5 @@ test("keyboard actions",async({page})=>
     await page.keyboard.up('Tab');
 
     await page.keyboard.press('Control+V');
+    
 });

@@ -1,18 +1,28 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from "dotenv";
 
-const env = process.env.ENV || 'swaglabs'; // Set the environment variable for the config file
-process.env.ENV = env;
+//const env = process.env.ENV || 'swaglabs'; // Set the environment variable for the config file
+//process.env.ENV = env;
 
-dotenv.config({
-  path: `./env/.env.${env}`,
-});
+//console.log('ENV =', env);
+
+// dotenv.config({
+//   path: `./env/.env.${env}`,
+//    override: true,
+// });
 
 // below can run from test level also see -> tests\practice\envDemo.spec.js
 // console.log(`✅ Loaded environment: ${env}`);
 // console.log(`🌐 BASE_URL: ${process.env.BASE_URL}`);
 
+// console.log('Loaded USERNAME =', process.env.USERNAME);
+// console.log('Loaded PASSWORD =', process.env.PASSWORD);
 
+// for lambda test ===========================
+//import dotenv from 'dotenv';
+
+dotenv.config({ path: './env/.env' });
+//===========================================
 export default defineConfig({
 
   testDir: './tests',
@@ -39,30 +49,30 @@ export default defineConfig({
     },
 
 //============================================
-// lambdaTest setup, Run = npx playwright test -g "@smoke" --project=chromium-lambdatest 
+// lambdaTest setup, Run = npx playwright test -g "@dropdown" --project=lambdatest 
 //============================================
-//     {
-//       name: "Lambda Chrome",   // Project name (you can name it anything)
-//       use: {                    // Browser & connection settings
-//          connectOptions: {       // Special option to connect to a remote browser
-//         wsEndpoint:           // WebSocket endpoint to connect to LambdaTest
-//            `wss://cdp.lambdatest.com/playwright?capabilities=` +
-//         encodeURIComponent(
-//           JSON.stringify({   // Convert capabilities object to string
-//             browserName: "Chrome",       // Browser to run (Chrome)
-//             browserVersion: "latest",    // Latest version
-//             platform: "Windows 11",      // OS to run on
-//             "LT:Options": {              // LambdaTest specific options
-//               user: process.env.LT_USERNAME,  // LambdaTest username
-//               accessKey: process.env.LT_ACCESS_KEY, // LambdaTest access key
-//               build: "Deepak Build",           // Build name for grouping tests
-//               name: "Google Test"             // Test name
-//             }
-//           })
-//         ),
-//     },
-//   }
-// }
+    {
+      name: "lambdatest",   // Project name (you can name it anything)
+      use: {                    // Browser & connection settings
+         connectOptions: {       // Special option to connect to a remote browser
+        wsEndpoint:           // WebSocket endpoint to connect to LambdaTest
+           `wss://cdp.lambdatest.com/playwright?capabilities=` +
+        encodeURIComponent(
+          JSON.stringify({   // Convert capabilities object to string
+            browserName: "Chrome",       // Browser to run (Chrome)
+            browserVersion: "latest",    // Latest version
+            platform: "Windows 11",      // OS to run on
+            "LT:Options": {              // LambdaTest specific options
+              user: process.env.LT_USERNAME,  // LambdaTest username
+              accessKey: process.env.LT_ACCESS_KEY, // LambdaTest access key
+              build: "Deepak Build",           // Build name for grouping tests
+              name: "Google Test"             // Test name
+            }
+          })
+        ),
+    },
+  }
+}
 
 //============================================
 

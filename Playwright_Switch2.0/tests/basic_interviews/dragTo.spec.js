@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test('drag functionality', async ({ page }) => {
+test('drag functionality @drag', async ({ page }) => {
 
     await page.goto("https://testautomationpractice.blogspot.com/");
 
@@ -8,7 +8,7 @@ test('drag functionality', async ({ page }) => {
     const point_B = page.locator('//*[@id="droppable"]');
 
     // Scroll to the draggable element if needed
-    await point_B.scrollIntoViewIfNeeded();c
+    await point_B.scrollIntoViewIfNeeded();
 
     await point_A.dragTo(point_B);
 
@@ -18,7 +18,7 @@ test('drag functionality', async ({ page }) => {
 
     console.log("Title: ", title);
     console.log("URL: ", url   );
-    console.log("Page Source: ", pageSource);
+    //console.log("Page Source: ", pageSource);
     
     
     
