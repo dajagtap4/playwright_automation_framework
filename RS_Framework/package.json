@@ -1,0 +1,52 @@
+{
+  "name": "clientapp-pw-framework",
+  "version": "1.0.0",
+  "description": "Professional Playwright automation framework for the Client App, organized around the Page Object Model, custom fixtures, multi-environment configuration, and Allure reporting.",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "cross-env ENV=qa playwright test",
+    "test:dev": "cross-env ENV=dev playwright test",
+    "test:qa": "cross-env ENV=qa playwright test",
+    "test:prod": "cross-env ENV=prod playwright test",
+    "test:smoke": "cross-env ENV=qa playwright test --grep @smoke",
+    "test:regression": "cross-env ENV=qa playwright test --grep @regression",
+    "test:orders": "cross-env ENV=qa playwright test tests/e2e/orders --project=chromium",
+    "test:headed": "cross-env ENV=qa playwright test --headed",
+    "test:debug": "cross-env ENV=qa PWDEBUG=1 playwright test",
+    "test:ui": "cross-env ENV=qa playwright test --ui",
+    "report:html": "playwright show-report reports/html-report",
+    "report:allure": "allure generate ./reports/allure-results --clean -o ./reports/allure-report && allure open ./reports/allure-report",
+    "clean": "rimraf reports/allure-results reports/allure-report reports/html-report test-results",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\""
+  },
+  "keywords": [
+    "playwright",
+    "automation",
+    "e2e",
+    "pom",
+    "allure"
+  ],
+  "author": "Deepak Jagtap",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^22.15.3",
+    "allure-playwright": "^3.4.3",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-playwright": "^1.6.2",
+    "prettier": "^3.6.2",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

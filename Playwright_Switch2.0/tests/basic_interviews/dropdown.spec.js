@@ -5,31 +5,19 @@ test.beforeEach(async ({ page }) => {
 });
 
 test('dropdown handling @dropdown', async ({ page }) => {
-
-    //await page.goto("https://testautomationpractice.blogspot.com/");
-
     await page.selectOption('#country', {label: 'United Kingdom'}); // by visible text
-
     await page.selectOption('#country', {index: 7}); // by position
-    
     await page.selectOption('#country', 'france');  // by value
-
-    await page.close();
  });
 
  test('dropdown with scroll @dropdown', async ({ page }) => {
-
-    //await page.goto("https://testautomationpractice.blogspot.com/");
-
     const element = page.locator('#country');
     await element.scrollIntoViewIfNeeded();
 
     await page.selectOption('#country', {index:4});
-
  });
 
  test('check number of options in dropdown',async( { page }) => {
-
     //Approch 1 : 
     const options = page.locator("#country option");
     const count = await options.count();
@@ -38,14 +26,12 @@ test('dropdown handling @dropdown', async ({ page }) => {
  });
 
  test('check India option present in dropdown',async( { page }) => {
-
     //Assertion
     const content= await page.locator('#country').textContent()
     expect(content?.includes('India') || false).toBeTruthy()  //pass
     expect(content?.includes('Ind') || false).toBeTruthy()    //pass
     expect(content?.includes('dia') || false).toBeTruthy()    //pass
     //expect(content?.includes('deepak') || false).toBeTruthy() //fails
-
  })
  
  //after each close page

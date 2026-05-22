@@ -1,0 +1,3 @@
+2026-05-22T13:40:32.338Z INFO   [fixture] Pre-login for test "@smoke TC-DASH-001: Dashboard renders product catalog after login"
+2026-05-22T13:40:32.339Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:40:37.519Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"

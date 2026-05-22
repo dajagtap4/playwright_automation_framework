@@ -1,0 +1,194 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e\orders\placeOrderParam.spec.js >> @regression @orders Place order — parameterized E2E >> @smoke TC-ORDER-001: Place order for ZARA COAT 3
+- Location: tests\e2e\orders\placeOrderParam.spec.js:13:4
+
+# Error details
+
+```
+Error: Order "6a105d2617ee3e78ba919ad9" not found in history
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - navigation [ref=e5]:
+    - generic [ref=e7]:
+      - link "Automation Automation Practice":
+        - /url: ""
+        - generic [ref=e8]:
+          - heading "Automation" [level=3] [ref=e9]
+          - paragraph [ref=e10]: Automation Practice
+    - text: 
+    - link "Get Shortlisted by Recruiters - Take QA Skill Assessments on TechSmartHire" [ref=e11] [cursor=pointer]:
+      - /url: https://techsmarthire.com/
+    - list [ref=e12]:
+      - listitem [ref=e13] [cursor=pointer]:
+        - button " HOME" [ref=e14]:
+          - generic [ref=e15]: 
+          - text: HOME
+      - listitem
+      - listitem [ref=e16] [cursor=pointer]:
+        - button " ORDERS" [ref=e17]:
+          - generic [ref=e18]: 
+          - text: ORDERS
+      - listitem [ref=e19] [cursor=pointer]:
+        - button " Cart" [ref=e20]:
+          - generic [ref=e21]: 
+          - text: Cart
+      - listitem [ref=e22] [cursor=pointer]:
+        - button "Sign Out" [ref=e23]:
+          - generic [ref=e24]: 
+          - text: Sign Out
+  - generic [ref=e25]:
+    - heading "Your Orders" [level=1] [ref=e26]
+    - table [ref=e27]:
+      - rowgroup [ref=e28]:
+        - row "Order Id Product Image Name Price Ordered Date View Delete" [ref=e29]:
+          - columnheader "Order Id" [ref=e30]
+          - columnheader "Product Image" [ref=e31]
+          - columnheader "Name" [ref=e32]
+          - columnheader "Price" [ref=e33]
+          - columnheader "Ordered Date" [ref=e34]
+          - columnheader "View" [ref=e35]
+          - columnheader "Delete" [ref=e36]
+      - rowgroup [ref=e37]:
+        - row "6a105d2617ee3e78ba919ad9 ZARA COAT 3 $ 11500 Fri May 22 View Delete" [ref=e38]:
+          - rowheader "6a105d2617ee3e78ba919ad9" [ref=e39]
+          - cell [ref=e40]:
+            - img [ref=e41]
+          - cell "ZARA COAT 3" [ref=e42]
+          - cell "$ 11500" [ref=e43]
+          - cell "Fri May 22" [ref=e44]
+          - cell "View" [ref=e45]:
+            - button "View" [ref=e46] [cursor=pointer]
+          - cell "Delete" [ref=e47]:
+            - button "Delete" [ref=e48] [cursor=pointer]
+        - row "6a105cf817ee3e78ba919a0b ZARA COAT 3 $ 11500 Fri May 22 View Delete" [ref=e49]:
+          - rowheader "6a105cf817ee3e78ba919a0b" [ref=e50]
+          - cell [ref=e51]:
+            - img [ref=e52]
+          - cell "ZARA COAT 3" [ref=e53]
+          - cell "$ 11500" [ref=e54]
+          - cell "Fri May 22" [ref=e55]
+          - cell "View" [ref=e56]:
+            - button "View" [ref=e57] [cursor=pointer]
+          - cell "Delete" [ref=e58]:
+            - button "Delete" [ref=e59] [cursor=pointer]
+        - row "6a105cc017ee3e78ba91990b ADIDAS ORIGINAL $ 11500 Fri May 22 View Delete" [ref=e60]:
+          - rowheader "6a105cc017ee3e78ba91990b" [ref=e61]
+          - cell [ref=e62]:
+            - img [ref=e63]
+          - cell "ADIDAS ORIGINAL" [ref=e64]
+          - cell "$ 11500" [ref=e65]
+          - cell "Fri May 22" [ref=e66]
+          - cell "View" [ref=e67]:
+            - button "View" [ref=e68] [cursor=pointer]
+          - cell "Delete" [ref=e69]:
+            - button "Delete" [ref=e70] [cursor=pointer]
+        - row "6a105cb617ee3e78ba9198d3 ZARA COAT 3 $ 11500 Fri May 22 View Delete" [ref=e71]:
+          - rowheader "6a105cb617ee3e78ba9198d3" [ref=e72]
+          - cell [ref=e73]:
+            - img [ref=e74]
+          - cell "ZARA COAT 3" [ref=e75]
+          - cell "$ 11500" [ref=e76]
+          - cell "Fri May 22" [ref=e77]
+          - cell "View" [ref=e78]:
+            - button "View" [ref=e79] [cursor=pointer]
+          - cell "Delete" [ref=e80]:
+            - button "Delete" [ref=e81] [cursor=pointer]
+        - row "6a105cb417ee3e78ba9198c0 ZARA COAT 3 $ 11500 Fri May 22 View Delete" [ref=e82]:
+          - rowheader "6a105cb417ee3e78ba9198c0" [ref=e83]
+          - cell [ref=e84]:
+            - img [ref=e85]
+          - cell "ZARA COAT 3" [ref=e86]
+          - cell "$ 11500" [ref=e87]
+          - cell "Fri May 22" [ref=e88]
+          - cell "View" [ref=e89]:
+            - button "View" [ref=e90] [cursor=pointer]
+          - cell "Delete" [ref=e91]:
+            - button "Delete" [ref=e92] [cursor=pointer]
+        - row "6a105ac717ee3e78ba919336 ZARA COAT 3 $ 11500 Fri May 22 View Delete" [ref=e93]:
+          - rowheader "6a105ac717ee3e78ba919336" [ref=e94]
+          - cell [ref=e95]:
+            - img [ref=e96]
+          - cell "ZARA COAT 3" [ref=e97]
+          - cell "$ 11500" [ref=e98]
+          - cell "Fri May 22" [ref=e99]
+          - cell "View" [ref=e100]:
+            - button "View" [ref=e101] [cursor=pointer]
+          - cell "Delete" [ref=e102]:
+            - button "Delete" [ref=e103] [cursor=pointer]
+        - row "6a105a9e17ee3e78ba91929a ZARA COAT 3 $ 11500 Fri May 22 View Delete" [ref=e104]:
+          - rowheader "6a105a9e17ee3e78ba91929a" [ref=e105]
+          - cell [ref=e106]:
+            - img [ref=e107]
+          - cell "ZARA COAT 3" [ref=e108]
+          - cell "$ 11500" [ref=e109]
+          - cell "Fri May 22" [ref=e110]
+          - cell "View" [ref=e111]:
+            - button "View" [ref=e112] [cursor=pointer]
+          - cell "Delete" [ref=e113]:
+            - button "Delete" [ref=e114] [cursor=pointer]
+    - generic [ref=e115]: "* If orders Will be more than 7 your last order will get deleted"
+  - generic [ref=e117]:
+    - button "Go Back to Shop" [ref=e118] [cursor=pointer]
+    - button "Go Back to Cart" [ref=e119] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1  | const { BasePage } = require('./BasePage');
+  2  | 
+  3  | class OrderHistoryPage extends BasePage {
+  4  |  constructor(page) {
+  5  |    super(page);
+  6  |    this.ordersTable = page.locator('tbody');
+  7  |    this.orderRows = page.locator('tbody tr');
+  8  |    this.orderDetailId = page.locator('div.col-text');
+  9  |  }
+  10 | 
+  11 | 
+  12 |  async openOrderById(orderId) {
+  13 |    this.log.info(`Locating order ${orderId} in history`);
+  14 |    await this.ordersTable.waitFor();
+  15 | 
+  16 | 
+  17 |    const rowCount = await this.orderRows.count();
+  18 |    for (let i = 0; i < rowCount; i += 1) {
+  19 |      const row = this.orderRows.nth(i);
+  20 |      const rowOrderId = (await row.locator('th').textContent())?.trim();
+  21 | 
+  22 | 
+  23 |      if (orderId.includes(rowOrderId)) {
+  24 |        await row.locator('button').first().click();
+  25 |        await this.waitForLoad();
+  26 |        return;
+  27 |      }
+  28 |    }
+  29 | 
+  30 | 
+> 31 |    throw new Error(`Order "${orderId}" not found in history`);
+     |          ^ Error: Order "6a105d2617ee3e78ba919ad9" not found in history
+  32 |  }
+  33 | 
+  34 | 
+  35 |  async getDetailOrderId() {
+  36 |    return (await this.orderDetailId.textContent())?.trim();
+  37 |  }
+  38 | }
+  39 | 
+  40 | 
+  41 | module.exports = { OrderHistoryPage };
+  42 | 
+  43 | 
+  44 | 
+```

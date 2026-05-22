@@ -1,0 +1,2 @@
+2026-05-22T13:30:24.188Z INFO   [fixture] Pre-login for test "TC-DASH-003: Adding a product navigates to cart with that product"
+2026-05-22T13:30:24.189Z INFO  [LoginPage] Navigating to "#/auth/login"

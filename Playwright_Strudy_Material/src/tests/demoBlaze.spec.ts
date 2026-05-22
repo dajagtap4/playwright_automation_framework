@@ -1,10 +1,10 @@
 import {test, Locator, expect} from '@playwright/test'
 
-import { loginPage } from '../demoblaze-pom/loginPage'
-import { homePage } from '../demoblaze-pom/homePage'
-import { logoutPage } from '../demoblaze-pom/logoutPage'
-import { cartPage } from '../demoblaze-pom/cartPage'
-import { placeOdrForm } from '../demoblaze-pom/placeOdrForm'
+// import { loginPage } from '../demoblaze-pom/loginPage'
+// import { homePage } from '../demoblaze-pom/homePage'
+// import { logoutPage } from '../demoblaze-pom/logoutPage'
+// import { cartPage } from '../demoblaze-pom/cartPage'
+// import { placeOdrForm } from '../demoblaze-pom/placeOdrForm'
 
 test.beforeEach(async( {page} ) => {
     await page.goto("https://www.demoblaze.com/index.html")

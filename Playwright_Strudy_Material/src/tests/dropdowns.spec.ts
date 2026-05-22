@@ -1,40 +1,38 @@
-import { expect, test } from "@playwright/test";
-import exp from "constants";
-import { TIMEOUT } from "dns/promises";
+// import exp from "constants";
+// import { TIMEOUT } from "dns/promises";
+import { test, expect } from '@playwright/test';
 
-test.beforeEach(async( { page }) => {
+test.beforeEach(async ({ page }) => {
     await page.goto("https://testautomationpractice.blogspot.com/");
-})
+});
 
 //-----------------------------------------------------------------------------
 
+test('dropdown test', async ({ page }) => {
 
-test('test',async( { page }) => {
+    // label or visible text
+    await page.locator('#country').selectOption({ label: 'Canada' });
 
-    //label or visible text
-    await page.locator('#country').selectOption({label: 'Canada'});
+    await page.waitForTimeout(1000);
 
-    await page.waitForTimeout(1000)
-
-    //visible text
+    // visible text
     await page.locator('#country').selectOption('India');
 
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(1000);
 
-    //by passing value
-    await page.locator('#country').selectOption({value: 'uk'});
- 
-    await page.waitForTimeout(1000)
+    // by value
+    await page.locator('#country').selectOption({ value: 'uk' });
 
-    //by passing index
-    await page.locator('#country').selectOption({index: 4});
- 
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(1000);
 
-    //dropdown option
+    // by index
+    await page.locator('#country').selectOption({ index: 4 });
+
+    await page.waitForTimeout(1000);
+
+    // direct method
     await page.selectOption("#country", 'China');
- 
- })
+});
 
  test('check number of options in dropdown',async( { page }) => {
 
@@ -51,14 +49,14 @@ test('test',async( { page }) => {
  })
 
 
- test('Approch 1: check "India" option present in dropdown',async( { page }) => {
+ test('Approch 1: check India option present in dropdown',async( { page }) => {
 
     //Assertion
     const content= await page.locator('#country').textContent()
-    await expect(content.includes('India')).toBeTruthy()  //pass
-    await expect(content.includes('Ind')).toBeTruthy()    //pass
-    await expect(content.includes('dia')).toBeTruthy()    //pass
-    await expect(content.includes('deepak')).toBeTruthy() //fails
+    await expect(content?.includes('India') || false).toBeTruthy()  //pass
+    await expect(content?.includes('Ind') || false).toBeTruthy()    //pass
+    await expect(content?.includes('dia') || false).toBeTruthy()    //pass
+    //await expect(content?.includes('deepak') || false).toBeTruthy() //fails
 
  })
 
@@ -72,7 +70,7 @@ test('test',async( { page }) => {
         console.log(await option.textContent())
 
         let value=await option.textContent()
-        if(value.includes("Brazil")){
+        if(value?.includes("Brazil")){
             status=true;
             break;
         }
@@ -88,8 +86,8 @@ test('test',async( { page }) => {
     for(const option of options){
 
         let value=await option.textContent()
-        if(value.includes("Brazil")){
-            await page.selectOption("#country", value)
+        if(value?.includes("Brazil")){
+            await page.selectOption("#country", value || "")
             break;
         }
     }

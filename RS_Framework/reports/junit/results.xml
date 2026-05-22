@@ -1,0 +1,32 @@
+<testsuites id="" name="" tests="3" failures="0" skipped="0" errors="0" time="13.485582">
+<testsuite name="e2e\dashboard\dashboard.spec.js" timestamp="2026-05-22T13:50:40.210Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.971" errors="0">
+<testcase name="@regression @dashboard Dashboard flows › @smoke TC-DASH-001: Dashboard renders product catalog after login" classname="e2e\dashboard\dashboard.spec.js" time="2.971">
+<system-out>
+<![CDATA[2026-05-22T13:50:42.960Z INFO   [fixture] Pre-login for test "@smoke TC-DASH-001: Dashboard renders product catalog after login"
+2026-05-22T13:50:42.961Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:50:43.405Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="e2e\dashboard\dashboard.spec.js" timestamp="2026-05-22T13:50:40.210Z" hostname="firefox" tests="1" failures="0" skipped="0" time="8.109" errors="0">
+<testcase name="@regression @dashboard Dashboard flows › @smoke TC-DASH-001: Dashboard renders product catalog after login" classname="e2e\dashboard\dashboard.spec.js" time="8.109">
+<system-out>
+<![CDATA[2026-05-22T13:50:48.092Z INFO   [fixture] Pre-login for test "@smoke TC-DASH-001: Dashboard renders product catalog after login"
+2026-05-22T13:50:48.093Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:50:50.063Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="e2e\dashboard\dashboard.spec.js" timestamp="2026-05-22T13:50:40.210Z" hostname="webkit" tests="1" failures="0" skipped="0" time="11.284" errors="0">
+<testcase name="@regression @dashboard Dashboard flows › @smoke TC-DASH-001: Dashboard renders product catalog after login" classname="e2e\dashboard\dashboard.spec.js" time="11.284">
+<system-out>
+<![CDATA[2026-05-22T13:50:43.045Z INFO   [fixture] Pre-login for test "@smoke TC-DASH-001: Dashboard renders product catalog after login"
+2026-05-22T13:50:43.047Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:50:46.992Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,2 @@
+2026-05-22T13:30:21.706Z INFO   [fixture] Pre-login for test "@smoke TC-DASH-001: Dashboard renders product catalog after login"
+2026-05-22T13:30:21.706Z INFO  [LoginPage] Navigating to "#/auth/login"

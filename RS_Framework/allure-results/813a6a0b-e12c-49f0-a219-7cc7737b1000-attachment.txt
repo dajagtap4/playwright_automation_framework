@@ -1,0 +1,2 @@
+2026-05-22T13:30:26.370Z INFO   [fixture] Pre-login for test "TC-DASH-002: Cart and Orders navigation are visible on dashboard"
+2026-05-22T13:30:26.370Z INFO  [LoginPage] Navigating to "#/auth/login"

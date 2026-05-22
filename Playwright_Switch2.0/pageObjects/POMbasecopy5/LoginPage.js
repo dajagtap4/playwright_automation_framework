@@ -15,7 +15,8 @@ async goTo(url)
     //await this.page.goto("https://basecopy5.staging.pg-test.com/v2/"); 
     // taking url from (path ->) env/.env.local file
     //await this.page.goto(process.env.BASE_URL);
-      await this.page.goto(url);
+    await this.page.goto(url);
+    await this.page.waitForLoadState('networkidle');
 
 }
 

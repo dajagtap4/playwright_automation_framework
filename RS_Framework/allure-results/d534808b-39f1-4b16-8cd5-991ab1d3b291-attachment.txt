@@ -1,0 +1,2 @@
+2026-05-22T13:30:50.081Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:30:52.839Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"

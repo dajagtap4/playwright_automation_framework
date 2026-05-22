@@ -1,0 +1,3 @@
+2026-05-22T13:41:42.677Z INFO   [fixture] Pre-login for test "TC-DASH-005: Orders nav opens the order history page"
+2026-05-22T13:41:42.678Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:41:44.712Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"

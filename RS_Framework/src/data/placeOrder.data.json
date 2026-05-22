@@ -1,0 +1,24 @@
+[
+ {
+   "testId": "TC-ORDER-001",
+   "description": "Place order for ZARA COAT 3",
+   "username": "jagtapda2019@gmail.com",
+   "password": "Deepak@1994",
+   "productName": "ZARA COAT 3",
+   "shipping": {
+     "countryCode": "ind",
+     "countryName": "India"
+   }
+ },
+ {
+   "testId": "TC-ORDER-002",
+   "description": "Place order for ADIDAS ORIGINAL",
+   "username": "jagtapda2019@gmail.com",
+   "password": "Deepak@1994",
+   "productName": "ADIDAS ORIGINAL",
+   "shipping": {
+     "countryCode": "ind",
+     "countryName": "India"
+   }
+ }
+]

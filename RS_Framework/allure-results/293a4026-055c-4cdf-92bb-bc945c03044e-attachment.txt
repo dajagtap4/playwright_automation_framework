@@ -1,0 +1,5 @@
+2026-05-22T13:41:33.297Z INFO   [fixture] Pre-login for test "TC-DASH-003: Adding a product navigates to cart with that product"
+2026-05-22T13:41:33.298Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:41:35.725Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+2026-05-22T13:41:38.253Z INFO  [DashboardPage] Adding product to cart: "ZARA COAT 3"
+2026-05-22T13:41:43.591Z INFO  [CartPage] Verifying product in cart: "ZARA COAT 3"

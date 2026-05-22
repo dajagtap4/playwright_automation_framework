@@ -1,0 +1,4 @@
+2026-05-22T13:41:33.032Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:41:36.033Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+2026-05-22T13:41:36.975Z INFO  [DashboardPage] Adding product to cart: "ADIDAS ORIGINAL"
+2026-05-22T13:41:40.899Z INFO  [CartPage] Verifying product in cart: "ADIDAS ORIGINAL"

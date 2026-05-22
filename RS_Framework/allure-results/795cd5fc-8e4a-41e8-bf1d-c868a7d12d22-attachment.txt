@@ -1,0 +1,9 @@
+2026-05-22T13:40:24.944Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:40:27.322Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+2026-05-22T13:40:27.804Z INFO  [DashboardPage] Adding product to cart: "ADIDAS ORIGINAL"
+2026-05-22T13:40:30.810Z INFO  [CartPage] Verifying product in cart: "ADIDAS ORIGINAL"
+2026-05-22T13:40:31.001Z INFO  [CartPage] Proceeding to checkout
+2026-05-22T13:40:31.442Z INFO  [OrderReviewPage] Selecting country: "India" (search: "ind")
+2026-05-22T13:40:32.457Z INFO  [OrderReviewPage] Submitting order
+2026-05-22T13:40:32.849Z INFO  [OrderReviewPage] Order placed: 6a105cc017ee3e78ba91990b
+2026-05-22T13:40:33.281Z INFO  [OrderHistoryPage] Locating order 6a105cc017ee3e78ba91990b in history

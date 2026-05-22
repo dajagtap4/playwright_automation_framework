@@ -1,0 +1,4 @@
+2026-05-22T13:30:31.893Z INFO   [fixture] Pre-login for test "TC-DASH-004: Unknown product name surfaces a clear error"
+2026-05-22T13:30:31.894Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:30:35.526Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+2026-05-22T13:30:37.403Z INFO  [DashboardPage] Adding product to cart: "NON_EXISTENT_PRODUCT_XYZ"

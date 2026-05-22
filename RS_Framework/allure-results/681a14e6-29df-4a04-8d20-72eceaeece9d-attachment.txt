@@ -1,0 +1,3 @@
+2026-05-22T13:41:31.871Z INFO   [fixture] Pre-login for test "TC-DASH-002: Cart and Orders navigation are visible on dashboard"
+2026-05-22T13:41:31.871Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:41:34.446Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"

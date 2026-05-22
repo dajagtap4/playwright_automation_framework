@@ -1,0 +1,1 @@
+2026-05-22T13:41:19.281Z INFO  [LoginPage] Navigating to "#/auth/login"

@@ -1,5 +1,5 @@
 //Palindrome?
-// 07/04/2026 | 
+// 07/04/2026 | 18/05/2026 |
 
         String name = "madam";
         String reverseName = "";
@@ -16,7 +16,7 @@
         
    
 ============================================================================== 
-// 07/04/2026 | 
+// 07/04/2026 | 18/05/2026 |
 Print all positive 
 
     int arr[] = {-10,-20,-30,0,10,20,30};
@@ -64,7 +64,7 @@ Print all positive
         System.out.println("Second most repeating character: " + smaxChar + " = " + smaxCount);
         System.out.println("Most repeating character: " + maxChar + " = " + maxCount);
 ==============================================================================
-07/04/2026 | 
+07/04/2026 | 18/05/2026 |
 //*Print Missing Number 
 
         int arr[] = {12, 14, 18};
@@ -87,34 +87,26 @@ Print all positive
         System.out.println(missingNu);
 
 ==============================================================================
-07/04/2026 | 
+07/04/2026 | 16/05/2026 |
 // frequency of characters in a string "aabdddess"
 Output = {a=2, b=1, d=3, e=1, s=2}
 
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 
         String str = "aabdddess";
         
         Map<Character,Integer> map = new LinkedHashMap<>();
-        for(int i=0;i<str.length();i++)
+
+        for(int i=0;i<str1.length();i++)
         {
-            char c = str.charAt(i);
-            if(map.containsKey(c))
-            {
-                map.put(c,map.get(c)+1);
-            }
-            else
-            map.put(c,1);
-        }
-         
-           for(Map.Entry<Character, Integer> entry : map.entrySet())
-           {
-               System.out.println(entry.getKey() +" -> "+entry.getValue());
-           }
+		 	char c = str1.charAt(i);
+		 	map.put(c,map.getOrDefault(c,0)+1);
+		}
+        
+        System.out.println(map);
 
 ==============================================================================
-06/04/2026 /
+06/04/2026 / 
 //frequency of only word Big and black
 
         String str = "Big black bug bit a big black dog on his big black nose";
@@ -154,7 +146,7 @@ import java.util.Map;
         }
 
 ==============================================================================
-06/04/2026 /
+06/04/2026 / 16/05/2026 |
 // AnagramUsingMap
 
             String str1 = "listen";
@@ -196,8 +188,8 @@ import java.util.Map;
 	            System.out.println("Not anagrams");
 	       
 ==============================================================================
-* 02/04/2026 | 04/04/2026 |    
-Duplicates in string
+* 02/04/2026 | 04/04/2026 | 15/05/2026 | 
+Print Duplicates in string
 
         String str = "deepak   ashokrao jagtap";
         str = str.replaceAll("\\s+","");
@@ -221,7 +213,7 @@ Duplicates in string
            }
 
  ==============================================================================          
-01/04/2026 | 04/04/2026 |
+01/04/2026 | 04/04/2026 | 15/05/2026 |
 Print longest and 2nd longest word from String.
 
         String name = "my name is deepak";
@@ -241,7 +233,7 @@ Print longest and 2nd longest word from String.
         System.out.println(secondLongest);
 
 ==============================================================================    
-31/03/2026 | 04/04/2026 |
+31/03/2026 | 04/04/2026 | 13/05/2026 |  
 *
 **
 ***
@@ -250,8 +242,8 @@ Print longest and 2nd longest word from String.
 		{
 			for (int j=0; j<=i; j++) 
 			{
-				System.out.print("*");  *,  **,  ***
-                System.out.print((char)('A'+j));  A,  AB,  ABC
+				System.out.print("*");  //*,  **,  ***
+                System.out.print((char)('A'+j));  //A,  AB,  ABC
 			}
 			System.out.println();
 		}
@@ -259,7 +251,7 @@ Print longest and 2nd longest word from String.
         for (int j=0; j<=i; j++)
         for (int j=i; j<5;  j++){      
 ==============================================================================
-31/03/2026 | 04/04/2026 |
+31/03/2026 | 04/04/2026 | 13/05/2026 |
 
 ***
 **
@@ -275,10 +267,10 @@ Print longest and 2nd longest word from String.
 		}
 
 ==============================================================================
-* 30/03/2026 | 04/04/2026 |
+* 30/03/2026 | 04/04/2026 | 13/05/2026 |
 //Print arry in ascending and descending
 
-        int arr[] = {8,4,5,9,7,0,1};
+        int arr[] = {8,4,5,0,9,7,0,1};
 
         for(int i=0;i<arr.length;i++)
         {
@@ -297,7 +289,7 @@ Print longest and 2nd longest word from String.
             System.out.print(arr[k] + " ");
         }
 ==============================================================================
-28/03/2026 | 04/04/2026 |
+28/03/2026 | 04/04/2026 | 13/05/2026 |
 Min Max array
 //Asked in R system interview.
 
@@ -305,9 +297,6 @@ Min Max array
 
 		int min = a[0];
 //      int Max = a[0]; // to find max nu.
-
-        // why not int i = 0; in below for ()?
-        // because a[0] is already stored in min
 
 		for (int i = 1; i < a.length; i++) { 
 
@@ -317,10 +306,9 @@ Min Max array
 				min = a[i];
 			}
 		}
-		System.out.println(min);
-//      System.out.println(max);  //  to find max nu.
+		System.out.println(min or max);
 ==============================================================================
-27/03/2026 | 04/04/2026 |
+27/03/2026 | 04/04/2026 | 13/05/2026 |
 String - Remove Duplicates
 
         String name = "aabdddess";   

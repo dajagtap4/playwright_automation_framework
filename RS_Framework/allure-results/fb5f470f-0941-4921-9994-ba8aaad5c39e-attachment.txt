@@ -1,0 +1,9 @@
+2026-05-22T13:40:13.678Z INFO  [LoginPage] Navigating to "#/auth/login"
+2026-05-22T13:40:15.276Z INFO  [LoginPage] Logging in as "jagtapda2019@gmail.com"
+2026-05-22T13:40:16.274Z INFO  [DashboardPage] Adding product to cart: "ZARA COAT 3"
+2026-05-22T13:40:20.340Z INFO  [CartPage] Verifying product in cart: "ZARA COAT 3"
+2026-05-22T13:40:20.473Z INFO  [CartPage] Proceeding to checkout
+2026-05-22T13:40:21.043Z INFO  [OrderReviewPage] Selecting country: "India" (search: "ind")
+2026-05-22T13:40:21.923Z INFO  [OrderReviewPage] Submitting order
+2026-05-22T13:40:22.239Z INFO  [OrderReviewPage] Order placed: 6a105cb617ee3e78ba9198d3
+2026-05-22T13:40:22.530Z INFO  [OrderHistoryPage] Locating order 6a105cb617ee3e78ba9198d3 in history

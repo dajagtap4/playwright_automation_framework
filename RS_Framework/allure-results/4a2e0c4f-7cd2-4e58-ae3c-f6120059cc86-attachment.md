@@ -1,0 +1,141 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: e2e\dashboard\dashboard.spec.js >> @regression @dashboard Dashboard flows >> @smoke TC-DASH-001: Dashboard renders product catalog after login
+- Location: tests\e2e\dashboard\dashboard.spec.js:5:2
+
+# Error details
+
+```
+TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e7]: Ecom
+      - generic [ref=e9]:
+        - link " dummywebsite@rahulshettyacademy.com" [ref=e11] [cursor=pointer]:
+          - /url: emailto:dummywebsite@rahulshettyacademy.com
+          - generic [ref=e12]: 
+          - text: dummywebsite@rahulshettyacademy.com
+        - generic [ref=e13]:
+          - link "" [ref=e14] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e15]: 
+          - link "" [ref=e16] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e17]: 
+          - link "" [ref=e18] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e19]: 
+          - link "" [ref=e20] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=e21]: 
+  - generic [ref=e22]:
+    - generic [ref=e23]:
+      - heading "We Make Your Shopping Simple" [level=3]
+      - heading "Practice Website for Rahul Shetty Academy Students" [level=1] [ref=e24]:
+        - text: Practice Website for
+        - emphasis [ref=e25]: Rahul Shetty Academy
+        - text: Students
+      - link "Register" [ref=e26] [cursor=pointer]:
+        - /url: "#/auth/register"
+    - generic [ref=e28]:
+      - paragraph [ref=e29]:
+        - generic [ref=e30]: Register to sign in with your personal account
+      - generic [ref=e31]:
+        - heading "Log in" [level=1] [ref=e32]
+        - generic [ref=e33]:
+          - generic [ref=e34]:
+            - generic [ref=e35]: Email
+            - textbox "email@example.com" [ref=e36]
+          - generic [ref=e37]:
+            - generic [ref=e38]: Password
+            - textbox "enter your passsword" [ref=e39]
+          - button "Login" [ref=e40] [cursor=pointer]
+        - link "Forgot password?" [ref=e41] [cursor=pointer]:
+          - /url: "#/auth/password-new"
+        - paragraph [ref=e42] [cursor=pointer]: Don't have an account? Register here
+  - generic [ref=e43]:
+    - heading "Why People Choose Us?" [level=1] [ref=e46]
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e50]: 
+        - generic [ref=e51]:
+          - heading "3546540" [level=1]
+          - paragraph [ref=e52]: Successfull Orders
+      - generic [ref=e53]:
+        - generic [ref=e55]: 
+        - generic [ref=e56]:
+          - heading "37653" [level=1]
+          - paragraph [ref=e57]: Customers
+      - generic [ref=e58]:
+        - generic [ref=e60]: 
+        - generic [ref=e61]:
+          - heading "3243" [level=1]
+          - paragraph [ref=e62]: Sellers
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e66]: 
+        - generic [ref=e67]:
+          - heading "4500+" [level=1]
+          - paragraph [ref=e68]: Daily Orders
+      - generic [ref=e69]:
+        - generic [ref=e71]: 
+        - generic [ref=e72]:
+          - heading "500+" [level=1]
+          - paragraph [ref=e73]: Daily New Customer Joining
+```
+
+# Test source
+
+```ts
+  1  | const logger = require('../utils/logger');
+  2  | 
+  3  | class BasePage {
+  4  |  constructor(page) {
+  5  |    if (!page) {
+  6  |      throw new Error('BasePage requires a Playwright Page instance');
+  7  |    }
+  8  |    this.page = page;
+  9  |    this.log = logger.child({ scope: this.constructor.name });
+  10 |  }
+  11 | 
+  12 | 
+  13 |  async open(path = '') {
+  14 |    const url = path.startsWith('http') ? path : path;
+  15 |    this.log.info(`Navigating to "${url || 'baseURL'}"`);
+  16 |    await this.page.goto(url);
+  17 |    await this.waitForLoad();
+  18 |  }
+  19 | 
+  20 | 
+  21 |  async waitForLoad(state = 'networkidle') {
+> 22 |    await this.page.waitForLoadState(state);
+     |                    ^ TimeoutError: page.waitForLoadState: Timeout 30000ms exceeded.
+  23 |  }
+  24 | 
+  25 | 
+  26 |  async title() {
+  27 |    return this.page.title();
+  28 |  }
+  29 | 
+  30 | 
+  31 |  async url() {
+  32 |    return this.page.url();
+  33 |  }
+  34 | }
+  35 | 
+  36 | 
+  37 | module.exports = { BasePage };
+  38 | 
+```
