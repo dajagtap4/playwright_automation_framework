@@ -97,16 +97,14 @@ import java.util.*;
         
         Map<Character,Integer> map = new LinkedHashMap<>();
 
-        for(int i=0;i<str1.length();i++)
-        {
-		 	char c = str1.charAt(i);
-		 	map.put(c,map.getOrDefault(c,0)+1);
-		}
+        for (char c : str.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
         
         System.out.println(map);
 
 ==============================================================================
-06/04/2026 / 
+06/04/2026 / 22/05/2026 //23/05/2026
 //frequency of only word Big and black
 
         String str = "Big black bug bit a big black dog on his big black nose";
@@ -114,11 +112,11 @@ import java.util.*;
         String[] words = str.toLowerCase().split("\\s+");
         Map<String, Integer> map = new LinkedHashMap<>();
 
-        for (String c : words) {
+        for (String c : words) 
             map.put(c, map.getOrDefault(c, 0) + 1);
-        }
 
-        for(Map.Entry<Character, Integer> entry : map.entrySet())
+
+        for(Map.Entry<String, Integer> entry : map.entrySet())
         {
              if (entry.getKey().equals("big") || entry.getKey().equals("black")) 
              {
@@ -128,7 +126,7 @@ import java.util.*;
 
 ==============================================================================
 //How many times word appears in a sentence.
-06/04/2026 /
+06/04/2026 / 22/05/2026 /23/05/2026
         import java.util.*; 
 
         String line = "Big black bug bit a big black dog on his big black nose";
@@ -136,17 +134,15 @@ import java.util.*;
 
         Map<String,Integer> map = new LinkedHashMap<>();
 
-        for (String c : words) {
+        for (String c : words) 
             map.put(c, map.getOrDefault(c, 0) + 1);
-        }
 
         for (Map.Entry<String,Integer> entry : map.entrySet()) 
-        {
             System.out.println(entry.getKey()+" "+ entry.getValue());
-        }
+
 
 ==============================================================================
-06/04/2026 / 16/05/2026 |
+06/04/2026 / 16/05/2026 | 23/05/2026
 // AnagramUsingMap
 
             String str1 = "listen";
@@ -188,32 +184,23 @@ import java.util.*;
 	            System.out.println("Not anagrams");
 	       
 ==============================================================================
-* 02/04/2026 | 04/04/2026 | 15/05/2026 | 
+* 02/04/2026 | 04/04/2026 | 15/05/2026 | 23/05/2026 |
 Print Duplicates in string
 
         String str = "deepak   ashokrao jagtap";
-        str = str.replaceAll("\\s+","");
-        Map<Character,Integer> map = new LinkedHashMap<>();
-        for(int i=0;i<str.length();i++)
-        {
-            char c = str.charAt(i);
-            if(map.containsKey(c))
-            {
-                map.put(c,map.get(c)+1);
-            }
-            else
-            map.put(c,1);
-        }
-            for(Map.Entry<Character, Integer> entry : map.entrySet())
-           {
-               if(entry.getValue() > 1)
-               {
-                   System.out.println(entry.getKey() +" -> "+entry.getValue());
-               }
-           }
+        String str2 = str.replaceAll("\\s+","");
 
+        Map<Character,Integer> map = new LinkedHashMap<>();
+
+        for(char c: str2.toCharArray())
+            map.put(c,map.getOrDefault(c,0)+1);
+        
+            for(Map.Entry<Character, Integer> entry : map.entrySet())          
+               if(entry.getValue() > 1)
+                   System.out.println(entry.getKey() +" -> "+entry.getValue());
+          
  ==============================================================================          
-01/04/2026 | 04/04/2026 | 15/05/2026 |
+01/04/2026 | 04/04/2026 | 15/05/2026 | 23/05/2026 |
 Print longest and 2nd longest word from String.
 
         String name = "my name is deepak";
@@ -224,13 +211,18 @@ Print longest and 2nd longest word from String.
         
          for (int i = 0; i < words.length; i++)
          {
-            if(words[i].length() > longest.length()){
+            if(words[i].length() > longest.length()) 
+            {
                 secondLongest = longest;
                 longest = words[i];
             }
+            else if(words[i].length() > secondLongest.length() && !words[i].equals(longest)) 
+            {
+                secondLongest = words[i];
+            }
         }
-        System.out.println(longest);
-        System.out.println(secondLongest);
+            System.out.println(longest);
+            System.out.println(secondLongest);
 
 ==============================================================================    
 31/03/2026 | 04/04/2026 | 13/05/2026 |  
@@ -308,17 +300,14 @@ Min Max array
 		}
 		System.out.println(min or max);
 ==============================================================================
-27/03/2026 | 04/04/2026 | 13/05/2026 |
+27/03/2026 | 04/04/2026 | 13/05/2026 | 23/05/2026 |
 String - Remove Duplicates
 
         String name = "aabdddess";   
         Set<Character> set = new LinkedHashSet<Character>();
         
-        for(int i=0;i<name.length();i++)
-        {
-            char c = name.charAt(i);
+        for( char c : name.toCharArray())
             set.add(c);     
-        }
         System.out.println(set);
 
 Array = Remove duplicates
@@ -326,8 +315,27 @@ Array = Remove duplicates
 
         int arr[] = {8,4,5,0,9,7,5,5,0,1};
         Set<Integer> set = new LinkedHashSet<Integer>();
-        for(int i=0;i<arr.length;i++)
-            set.add(arr[i]);     
+
+        for(int c : arr)    or    for(int i=0;i<arr.length;i++)
+           set.add(c);      or    set.add(arr[i]);     
         System.out.println(set);
+
+
+Set - Interface
+    Classes -  all 3 have ❌ duplicates, not thread safe, 
+        HashSet - 
+                    No order,  
+                    null allowed, 
+                    fast performance.
+
+        LinkedHashSet - 
+                    Insertion order, 
+                    null allowed, 
+
+        TreeSet - 
+                    Sorted order,  
+                    null not allowed, 
+                    slower performance.
+ 
 
 ==============================================================================

@@ -19,7 +19,4 @@ test('drag functionality @drag', async ({ page }) => {
     console.log("Title: ", title);
     console.log("URL: ", url   );
     //console.log("Page Source: ", pageSource);
-    
-    
-    
  })
