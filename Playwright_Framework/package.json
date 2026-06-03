@@ -1,0 +1,26 @@
+{
+  "name": "playwright_framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "test": "playwright test",
+    "chrome":
+      "playwright test --project=chromium --headed",
+    "headed":
+      "playwright test --headed",
+    "debug":
+      "playwright test --debug",
+    "report":
+      "playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "dotenv": "^17.4.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
