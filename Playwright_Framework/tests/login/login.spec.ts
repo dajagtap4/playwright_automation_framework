@@ -1,11 +1,7 @@
 import { test } from '../../fixtures/baseFixture';
 import users from '../../test-data/users.json';
 
-test('Verify Login', async ({
-    page,
-    loginPage,
-    homePage
-}) => {
+test('Verify Login and Logout', async ({ page, loginPage, homePage }) => {
 
     await page.goto('/practice-test-login/');
 
@@ -15,4 +11,12 @@ test('Verify Login', async ({
     );
 
     await homePage.verifySuccessfulLogin();
+    console.log('Login Successful');
+
+    await homePage.logout();
+
+    await homePage.verifyLogout();
+    console.log('Logout Successful');
+
 });
+
