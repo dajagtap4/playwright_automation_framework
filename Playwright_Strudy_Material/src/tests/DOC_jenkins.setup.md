@@ -12,6 +12,12 @@ https://www.jenkins.io/download/
 
 4. Navigate to jenkins Localhost - http://localhost:8080/
 
+enkins 
+username-dajagtap
+password-your frv pass
+registered email-jagtapda2019@gmail.com
+
+
 5. Need to find key to unlock, 
 * Navigate to below path,
 ```
