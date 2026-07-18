@@ -1,5 +1,17 @@
+//Reverse String
+//04/07/2026
+
+       String name = "automation"; 
+            for(int i=name.length()-1;i>=0;i--)
+            {
+                System.out.print(name.charAt(i));
+            }
+            System.out.print(" ");
+
+==============================================================================
+
 //Palindrome?
-// 07/04/2026 | 18/05/2026 |
+// 07/04/2026 | 18/05/2026 | 04/07/2026
 
         String name = "madam";
         String reverseName = "";
@@ -16,7 +28,7 @@
         
    
 ============================================================================== 
-// 07/04/2026 | 18/05/2026 |
+// 07/04/2026 | 18/05/2026 | 04/07/2026
 Print all positive 
 
     int arr[] = {-10,-20,-30,0,10,20,30};
@@ -31,19 +43,17 @@ Print all positive
 ============================================================================== 
 
 //*Print 1st and 2nd repitative char with count.
-
+// 04/07/2026
         String name = "im deepak QA engineer";
         name = name.replaceAll("\\s+","");
         
         Map<Character, Integer> map = new LinkedHashMap<>();
-        for(int i=0;i<name.length();i++){
+        for(int i=0;i<name.length();i++)
+        {
             char c = name.charAt(i);
-            
-            if(map.containsKey(c))
-                map.put(c,map.get(c)+1);
-            else
-                map.put(c,1);
+            map.put(c,map.getOrDefault(c,0)+1);
         }
+
         int maxCount = 0, smaxCount = 0;
         char maxChar = ' ', smaxChar = ' ';
  
@@ -87,7 +97,7 @@ Print all positive
         System.out.println(missingNu);
 
 ==============================================================================
-07/04/2026 | 16/05/2026 |
+07/04/2026 | 16/05/2026 | 04/07/2026
 // frequency of characters in a string "aabdddess"
 Output = {a=2, b=1, d=3, e=1, s=2}
 
@@ -104,11 +114,10 @@ import java.util.*;
         System.out.println(map);
 
 ==============================================================================
-06/04/2026 / 22/05/2026 //23/05/2026
+06/04/2026 / 22/05/2026 //23/05/2026 | 05/07/2026
 //frequency of only word Big and black
 
         String str = "Big black bug bit a big black dog on his big black nose";
-
         String[] words = str.toLowerCase().split("\\s+");
         Map<String, Integer> map = new LinkedHashMap<>();
 
@@ -125,23 +134,7 @@ import java.util.*;
         }
 
 ==============================================================================
-//How many times word appears in a sentence.
-06/04/2026 / 22/05/2026 /23/05/2026
-        import java.util.*; 
 
-        String line = "Big black bug bit a big black dog on his big black nose";
-        String[] words = line.toLowerCase().split("\\s+");
-
-        Map<String,Integer> map = new LinkedHashMap<>();
-
-        for (String c : words) 
-            map.put(c, map.getOrDefault(c, 0) + 1);
-
-        for (Map.Entry<String,Integer> entry : map.entrySet()) 
-            System.out.println(entry.getKey()+" "+ entry.getValue());
-
-
-==============================================================================
 06/04/2026 / 16/05/2026 | 23/05/2026
 // AnagramUsingMap
 
@@ -199,6 +192,24 @@ Print Duplicates in string
                if(entry.getValue() > 1)
                    System.out.println(entry.getKey() +" -> "+entry.getValue());
           
+==============================================================================
+Print Duplicates in Array
+
+        int[] arr = {1, 2, 3, 2, 4, 5, 5};
+
+        Map<Integer, Integer> map = new LinkedHashMap<>();
+
+        // 1. Count frequencies
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+        
+        // 2. Print elements with a count greater than 1
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {          
+            if (entry.getValue() > 1) {
+                System.out.println(entry.getKey() + " -> " + entry.getValue());
+            }
+        }
  ==============================================================================          
 01/04/2026 | 04/04/2026 | 15/05/2026 | 23/05/2026 |
 Print longest and 2nd longest word from String.
@@ -257,8 +268,86 @@ Print longest and 2nd longest word from String.
 			}
 			System.out.println();
 		}
+==============================================================================
+
+        1
+       121
+      12321
+     1234321
+    123454321
+   12345654321
+  1234567654321
+ 123456787654321
+12345678987654321
+
+class Main {
+    public static void main(String[] args) {
+        int n = 9;
+        for(int i=1;i<=n;i++) // i=2
+        { 
+        
+           for(int j=1; j<=n-i; j++)
+            { 
+                System.out.print(" ");
+            }
+
+           for(int j=1; j<=i; j++)
+            { 
+                System.out.print(j);
+            }
+
+            for (int j=i-1; j>=1; j--) 
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+    }
+}
+==============================================================================
+  * 
+ ** 
+*** 
+
+ int n = 3;
+        
+        //for(int i=n;i>0;i--)
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=i;j<=n-1;j++)
+            {
+                 System.out.print(" ");
+            }
+            for(int j=1;j<=i;j++)
+            {
+                 System.out.print("*");
+            }
+            System.out.println(" ");
+        }
+    }
 
 ==============================================================================
+
+1 
+23 
+456 
+
+        int n = 3;
+        int num = 1;
+        //for(int i=n;i>0;i--)
+        for(int i=1;i<=n;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                 System.out.print(num);
+                 num++;
+            }
+           
+            System.out.println(" ");
+        }
+
+==============================================================================
+
 * 30/03/2026 | 04/04/2026 | 13/05/2026 |
 //Print arry in ascending and descending
 
@@ -338,4 +427,115 @@ Set - Interface
                     slower performance.
  
 
+==============================================================================
+find the longest Substring without repeating characters
+string = "geeksforgeeks"    = eksforg
+
+ String str = "geeksforgeeks";
+
+        Map<Character, Integer> map = new HashMap<>();
+
+        int start = 0;
+        int maxStart = 0;
+        int maxLength = 0;
+
+        for (int end = 0; end < str.length(); end++) {
+            char ch = str.charAt(end);
+
+            if (map.containsKey(ch) && map.get(ch) >= start) {
+                start = map.get(ch) + 1;
+            }
+
+            map.put(ch, end);
+
+            if (end - start + 1 > maxLength) {
+                maxLength = end - start + 1;
+                maxStart = start;
+            }
+        }
+
+==============================================================================
+
+        System.out.println(str.substring(maxStart, maxStart + maxLength));
+
+        int num = 121;
+        int original = num;
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            rev = rev + (digit * digit * digit); // armstrong number    
+            rev = rev * 10 + digit;  // palindrome number
+            num /= 10;
+        }
+
+        if(rev == original){
+            System.out.println("Palindrome");
+        }else{
+            System.out.println("Not Palindrome");
+}
+
+==============================================================================
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        String instr = "Calender a catches cat";  output = a cat catches Calender
+        String[] words = instr.split(" ");
+        Arrays.sort(words, (w1,w2) -> {
+            if(w1.length()!= w2.length())
+            return w1.length() - w2.length();
+            return w1.compareTo(w2);
+        });
+        System.out.println(String.join(" ",words));
+        }
+        
+    }
+==============================================================================
+//print 2nd largest nu.
+ int[] arr = {8, 4, 5, 0, 9, 7};
+        
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = Integer.MIN_VALUE;
+        
+        for(int num : arr){
+            if(num > largest){
+                secondLargest = largest;
+                largest = num;
+            }
+            else if(num > secondLargest && num != largest ){
+                secondLargest = num;
+            }
+        }
+         System.out.println("Second Largest: " + secondLargest);
+
+==============================================================================
+
+//"i love automation" ->  i evol noitamotua 
+
+public class Main {
+    public static void main(String[] args) {
+        String name = "i love automation"; // i evol noitamotua 
+        String[] words = name.split(" ");
+
+        for (String c : words) {
+            for (int i = c.length() - 1; i >= 0; i--) {
+                System.out.print(c.charAt(i));
+            }
+            System.out.print(" ");
+        }
+    }
+}
+
+==============================================================================
+
+        String name = "deepak ashokrao jagtap"; 
+        String[] name2 = name.split("\\s+");
+        String revString = "";
+        
+            for(int i=name2.length-1;i>=0;i--)
+            {
+                revString += name2[i] + " "; 
+            }
+            System.out.println(revString);
 ==============================================================================
